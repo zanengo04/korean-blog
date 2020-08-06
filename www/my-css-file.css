@@ -1,0 +1,120 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+}  
+
+main{
+  padding-top: 20px;
+}
+
+html {
+  background-color: #D5EFF5;
+  font-size: 20px;
+}
+
+h1 {
+  color: #0D9DE8;
+}
+li {
+  margin-left: 20px;
+}
+h2 {
+  list-style-type: none;
+}
+
+.special {
+  color: red
+}
+
+/* when they're in the same hiearchy*/
+h2 + dl {
+  font-size: 90%;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*
+body h1 + p .special {
+}
+
+This will style any element with a 
+class of special, which is inside a <p>, which comes just after an <h1>, which is inside a <body>
+
+*/
+
+header{
+  background-color: rgb(27, 27, 27);
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+nav {
+  float:right;
+  padding:7px;
+
+}
+
+.logo{
+  float:left;
+  cursor: pointer;
+}
+#search {
+  float:right;
+  border-radius: 20px;
+}
+nav ul{
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+  font-size: medium;
+ 
+}
+nav ul a:hover{
+  background: red;
+}
+
+nav ul a{
+  color:white;
+
+}
+nav ul li{
+  display: inline-block;
+  position: relative;
+}
+
+nav ul li ul{
+  display: none;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.88;
+  color:white;
+  text-decoration: none;
+  position: absolute;
+  border-radius: 6px;
+  padding-top: 12px;
+}
+
+nav ul li:hover ul{
+  display:block
+}
+
+nav ul li ul li a:hover{
+  background: red;
+ 
+}
+nav ul li ul li{
+  width: 200px;
+  padding-top: 5px;
+  padding-bottom: 5px
+}
+
