@@ -93,7 +93,7 @@ nav ul li{
   position: relative;
 }
 
-nav ul li ul{
+.dropMenu{
   display: none;
   background-color: rgb(0, 0, 0);
   opacity: 0.88;
@@ -104,15 +104,15 @@ nav ul li ul{
   padding-top: 12px;
 }
 
-nav ul li:hover ul{
+.listHover:hover ul{
   display:block
 }
 
-nav ul li ul li a:hover{
+.dropMenu li a:hover{
   background: red;
  
 }
-nav ul li ul li{
+.dropMenu li{
   width: 200px;
   padding-top: 5px;
   padding-bottom: 5px
