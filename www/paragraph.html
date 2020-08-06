@@ -28,6 +28,10 @@
     <!-- ================= Favicon ================== -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
+
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="my-css-file.css">
     <script src="myScript.js" defer></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -40,7 +44,8 @@
     <header>
       <a href="index.html">
         <img src="logo.png" width="auto" height="50" atl="logo" class="logo">
-      </a>      
+      </a>
+            
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -67,25 +72,26 @@
         </ul>
       </nav>
       <form id="search">
-        <input type="text" name="q" id="search" placeholder="Search...">
-    
+        <input type="text" name="q" id="search" placeholder="Search">
+        <a href="#" class = "search-button">
+          <i class="fas fa-search"></i>
+        </a>
       </form>
     </header>
-      
 
     <main>
-     
-      
-      <form action="/action_page.php">
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname" value=""><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname" value=""><br><br>
-        <input type="submit" value="Submit">
-      </form> 
-    
+        <div class="timer" id= "timer">0</div>
+        <div class="container">
+            <div class="text-display" id= "textdisplay">text</div>
+            <div class="text-Input" id="textInput">text</div>
+        </div>
+               
+               
+    </main>
+    <hr>
+    <footer>
+      <p>©Copyright 2050 by Quoc Ngo. All rights reversed.</p>
+    </footer>
   </body>
-  <footer>
-    <p>©Copyright 2050 by Quoc Ngo. All rights reversed.</p>
-  </footer>
+  
 </html>

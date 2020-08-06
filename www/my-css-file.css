@@ -102,10 +102,11 @@ nav ul li{
   position: absolute;
   border-radius: 6px;
   padding-top: 12px;
+  margin-bottom: 5px;
 }
 
 .listHover:hover ul{
-  display:block
+  display:block;
 }
 
 .dropMenu li a:hover{
@@ -115,6 +116,6 @@ nav ul li{
 .dropMenu li{
   width: 200px;
   padding-top: 5px;
-  padding-bottom: 5px
+  padding-bottom: 5px;
 }
 
