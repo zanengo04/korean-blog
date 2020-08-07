@@ -154,10 +154,17 @@ footer{
 
 /* Social media icons */
 
+.social{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .socialButton{
   height: 60px;
   width: 60px;
-  float:left;
+ 
   margin: 0px;
   background:#fff;
   border-radius: 50px;
@@ -182,8 +189,13 @@ footer{
 .socialButton:hover{
   width: 200px;
 }
+
+/*add white background to icon upon hover*/
 .socialButton:hover .icon i{
   color: #fff;
+}
+.socialButton:hover .socialName{
+  display: block;
 }
 .socialButton .icon{
   display:inline-block;
@@ -203,6 +215,7 @@ footer{
 }
 
 .socialName{
+  display:none;
   font-size: 20px;
   font-weight: 500;
   line-height: 60px;
