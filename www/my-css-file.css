@@ -3,8 +3,21 @@
   margin: 0px
 }  
 
+.grid-container{
+  margin:0;
+  display:grid;
+  grid-template-columns: 0.8fr 4fr 1.5fr;
+  grid-template-rows: 1fr auto 1fr;
+  grid-template-areas:
+    "header    header header"
+    "sidebar   main   sidebar2"
+    "footer    footer footer";
+}
 main{
+  grid-area: main;
   padding-top: 20px;
+  background-color: rgba(62, 158, 221, 0.658);
+  padding: 10px;
 }
 
 html {
@@ -51,6 +64,7 @@ class of special, which is inside a <p>, which comes just after an <h1>, which i
 */
 
 header{
+  grid-area: header;
   background-color: rgb(27, 27, 27);
 }
 
@@ -120,3 +134,18 @@ nav ul li{
   padding-bottom: 5px;
 }
 
+footer{
+  grid-area: footer;
+  background-color: black;
+  color:white;
+}
+
+
+
+.sidebar-left{
+  grid-area: sidebar;
+}
+
+.sidebar-right{
+  grid-area: sidebar2;
+}
