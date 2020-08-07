@@ -177,7 +177,7 @@ footer{
   width: 300px;
   text-align: right;
   border-radius: 50px;
-  transition: 1s;
+  transition: 0.7s;
   transition-property: transform;
   
 }
@@ -214,5 +214,6 @@ footer{
 }
                            
 .fb-like{
-  text-align: center;
+  transform: translate(5%, -30%);
+  
 }
