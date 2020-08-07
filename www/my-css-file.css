@@ -16,7 +16,7 @@
 main{
   grid-area: main;
   padding-top: 20px;
-  background-color: rgba(62, 158, 221, 0.658);
+  background-color: rgb(233, 249, 255);
   padding: 10px;
 }
 
@@ -144,80 +144,75 @@ footer{
 
 
 
-.sidebar-left{
+.left-sidebar{
   grid-area: sidebar;
+  background-color: white;
 }
 
-.sidebar-right{
+.right-sidebar{
   grid-area: sidebar2;
+  background-color: white;
 }
 
 /* Social media icons */
 
 .social{
   position: fixed;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transform: translate(-245px, 0);
 }
 
-.socialButton{
-  height: 60px;
-  width: 60px;
- 
-  margin: 0px;
-  background:#fff;
+.social a{
+  color: black;
+  background: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  display: block;
+  margin: 5px;
+  padding: 20px;
+  width: 300px;
+  text-align: right;
   border-radius: 50px;
-  cursor: pointer;
-  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
-  transition: all 0.3s ease-out;
+  transition: 1s;
+  transition-property: transform;
   
 }
-.socialButton:nth-child(1):hover .icon{
-  background: #4267B2;
-}
-.socialButton:nth-child(2):hover .icon{
-  background: #1DA1F2;
-}
-.socialButton:nth-child(3):hover .icon{
-  background: #E1306C;
 
-}
-.socialButtonn:nth-child(4):hover .icon{
-  background: #ff0000;
-}
-.socialButton:hover{
-  width: 200px;
+.social a:hover{
+  transform: translate(140px, 0);
+  text-decoration: none;
 }
 
-/*add white background to icon upon hover*/
-.socialButton:hover .icon i{
-  color: #fff;
-}
-.socialButton:hover .socialName{
-  display: block;
-}
-.socialButton .icon{
-  display:inline-block;
-  text-align: center;
-  height: 60px;
-  width: 60px;
-  border-radius: 50px;
-  box-sizing: border-box;
-  /* use to make elements space further or closer to each other */
-  line-height: 60px;
-  transition: all 0.3s ease-out;
-}
-
-.socialButton .icon i{
-  font-size: 25px;
-  line-height: 60px;
-}
-
-.socialName{
-  display:none;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 60px;
+.social i{
   margin-left: 10px;
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+}
+
+.social a:nth-child(1) i{
+  color: #1DA0F0;
+}
+
+.social a:nth-child(2) i{
+  color: #F80000;
+}
+
+.social a:nth-child(3) i{
+  color: transparent;
+  background-image: linear-gradient(45deg, #FFDF9E, #E56969, #8A49A1);
+  -webkit-background-clip: text;
+  font-weight: 600;
+}
+
+.social a:nth-child(4) i{
+  color: #4ECCE8;
+}
+                           
+.fb-like{
+  text-align: center;
 }

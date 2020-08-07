@@ -35,11 +35,19 @@
 
     <!--use to make side bar social media icons-->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!--youtube button-->
+    <script src="https://apis.google.com/js/platform.js"></script>
   </head>
 
 
 
   <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" 
+    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0" nonce="07fFQvzB"></script>
+
+
+
     <div class="grid-container">
       <header>
         <a href="index.html">
@@ -80,6 +88,7 @@
       </header>
   
       <main>
+        
         
         <button onclick="displayDate()">The time is?</button>  
         <p id="demo">Click below to get random number</p>
@@ -174,23 +183,16 @@
       
       <aside class='left-sidebar'>
         <div class="social">
-          <!--Facebook Icon-->
-          <div class="socialButton">
-            <div class="icon"><i class="fab fa-facebook-f"></i></div>
-            <span class='socialName'>Facebook</span>
-          <!--Instagram Icon-->
-          <div class="socialButton">
-            <div class="icon"><i class="fab fa-instagram"></i></div>
-            <span class='socialName'>Instagram</span>
-          <!--Twitter Icon-->
-          <div class="socialButton">
-            <div class="icon"><i class="fab fa-twitter"></i></div>
-            <span class='socialName'>Twitter</span>
-          <!--Youtube Icon-->
-          <div class="socialButton">
-            <div class="icon"><i class="fab fa-youtube"></i></div>
-            <span class='socialName'>Youtube</span>
-          </div>
+          <a href="https://www.facebook.com/" target="_blank">
+            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width=""
+            data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
+             <i class="fab fa-facebook"></i></a>
+          <a href="https://www.youtube.com/" target ="_blank">
+            <div class="g-ytsubscribe" data-channel="GoogleDevelopers" 
+            data-layout="default" data-count="default"></div> 
+            <i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com/" target ="_blank">Instagram <i class="fab fa-instagram"></i></a>
+          <a href="https://www.twitter.com/" target ="_blank">Twitter <i class="fab fa-twitter"></i></a>
         </div>
       </aside>
       <aside class='right-sidebar'></aside>
