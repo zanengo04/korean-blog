@@ -1,6 +1,6 @@
 const textDisplayElement = document.getElementById('textDisplay')
 const textInputElement = document.getElementById('textInput')
-
+let wordTyped = 0
 const numWords = 20
 var words =[
   '노트복',
@@ -26,7 +26,7 @@ function showWord(words) {
         var content ="";
         var span = document.createElement("span");
         span.setAttribute('wordNum', i+1)
-        content += words[randIndex];
+        content += words[randIndex]+ ' ';
         span.innerHTML=content
         // Output the list with comma seperating them
         textDisplayElement.appendChild(span)
@@ -41,32 +41,50 @@ function showWord(words) {
     }
   });
 
+// test white space
+function whiteSpace(){
+    var patt = new RegExp(" ");
+    var res = patt.test(textInputElement.value);
+    return res
+  }
+
+
 
 textInputElement.addEventListener('input', () => {
     // get all span type in an array
     //const arrayText = textDisplayElement.querySelectorAll('span')
     const arrayText = document.getElementsByTagName("span")
     const arrayValue = textInputElement.value.split('')
-    
-    wordTyped = 0
     letterTyped = arrayValue.length
-    console.log(arrayText[0].innerHTML[0])
+    // -1 because index needs to start from 0 and length is always at least 1
+    const inputCharacter = arrayValue[letterTyped-1]
+
+    console.log(textInputElement.value)
     
-   
     if (inputCharacter == null) {
-        arrayText[wordIndex].classList.remove('correct')
-        arrayText[wordIndex].classList.remove('wrong')
+        arrayText[wordTyped].classList.remove('correct')
+        arrayText[wordTyped].classList.remove('wrong')
         correct = false
-    } else if (inputCharacter === arrayText[wordTyped].innerHTML[letterTyped]) {
-        arrayText[wordIndex].classList.add('correct')
-        arrayText[wordIndex].classList.remove('wrong')
-        
+    } else if(whiteSpace(inputCharacter)&&
+         textInputElement.value !== arrayText[wordTyped].innerHTML){
+        arrayText[wordTyped].classList.remove('correct')
+        arrayText[wordTyped].classList.add('wrong')
+        wordTyped += 1
+        textInputElement.value = []
+    } else if (inputCharacter === arrayText[wordTyped].innerHTML[letterTyped-1]) {
+        arrayText[wordTyped].classList.add('correct')
+        arrayText[wordTyped].classList.remove('wrong')
+
     } else {
-        arrayText[wordIndex].classList.remove('correct')
-        arrayText[wordIndex].classList.add('wrong')
+        arrayText[wordTyped].classList.remove('correct')
+        arrayText[wordTyped].classList.add('wrong')
         correct = false
-        
+      
     }
+    if(textInputElement.value === arrayText[wordTyped].innerHTML){
+        wordTyped += 1
+        textInputElement.value = []
+    } 
 
 
         
