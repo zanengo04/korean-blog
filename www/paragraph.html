@@ -32,8 +32,8 @@
 
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="my-css-file.css">
-    <script src="myScript.js" defer></script>
+    <link rel="stylesheet" href="main.css">
+    <script src="typing.js" defer></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </head>
@@ -41,57 +41,62 @@
 
 
   <body>
-    <header>
-      <a href="index.html">
-        <img src="logo.png" width="auto" height="50" atl="logo" class="logo">
-      </a>
-            
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li class="listHover"><a href="#">Start Learning</a>
-            <ul class='dropMenu'>
-                <li><a href="#">Learn The Alphabet</a></li>
-                <li><a href="#">Basic Grammar</a></li>
-                <li><a href="#">Intermediate Grammar</a></li>
-                <li><a href="#">Essential Phrases</a></li>
-            </ul>
-            </li>
-          <li><a href="#">Blog</a></li>
-          <li class="listHover"><a href="typing.html">Typing Practice</a>
-            <ul class='dropMenu'>
-              <li><a href="hangeul.html">Hangeul</a></li>
-              <li><a href="paragraph.html">Paragraph</a></li>
-            </ul>
-            </li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="signup.html">Sign up</a></li>
-          <li><a href="#">Log In</a></li>
-
-        </ul>
-      </nav>
-      <form id="search">
-        <input type="text" name="q" id="search" placeholder="Search">
-        <a href="#" class = "search-button">
-          <i class="fas fa-search"></i>
+    <div class="grid-container-other">
+      <header>
+        <a href="index.html">
+          <img src="logo.png" width="auto" height="50" atl="logo" class="logo">
         </a>
-      </form>
-    </header>
+              
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="listHover"><a href="#">Start Learning</a>
+              <ul class='dropMenu'>
+                  <li><a href="#">Learn The Alphabet</a></li>
+                  <li><a href="#">Basic Grammar</a></li>
+                  <li><a href="#">Intermediate Grammar</a></li>
+                  <li><a href="#">Essential Phrases</a></li>
+              </ul>
+              </li>
+            <li><a href="#">Blog</a></li>
+            <li class="listHover"><a href="typing.html">Typing Practice</a>
+              <ul class='dropMenu'>
+                <li><a href="hangeul.html">Hangeul</a></li>
+                <li><a href="paragraph.html">Paragraph</a></li>
+              </ul>
+              </li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="signup.html">Sign up</a></li>
+            <li><a href="#">Log In</a></li>
 
-    <main>
-        <div class="timer" id= "timer">0</div>
-        <div class="container">
-            <div class="text-display" id= "textdisplay">text</div>
-            <textarea class="text-Input" id="textInput" autofocus>text</textarea>
-        </div>
+          </ul>
+        </nav>
+        <form id="search">
+          <input type="text" name="q" id="search" placeholder="Search">
+          <a href="#" class = "search-button">
+            <i class="fas fa-search"></i>
+          </a>
+        </form>
+      </header>
+
+      <main>
+          <div class="timer" id= "timer">0</div>
+          <div class="typingContainer">
+              <div class="text-display" id= "textDisplay">
                
-               
-    </main>
-    <hr>
-    <footer>
-      <p>©Copyright 2050 by Quoc Ngo. All rights reversed.</p>
-    </footer>
+              </div>
+              <input type='text' class="text-Input" id="textInput" autofocus></input>
+              
+          </div>
+          
+                
+      </main>
+      
+      <footer>
+        <p>©Copyright 2050 by Quoc Ngo. All rights reversed.</p>
+      </footer>
+    </div>
   </body>
   
 </html>
