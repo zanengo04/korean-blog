@@ -1,9 +1,9 @@
 const textDisplayElement = document.getElementById('textDisplay')
 const textInputElement = document.getElementById('textInput')
 let wordTyped = 0
-const numWords = 20
+const numWords = 100
 var words =[
-  '노트복',
+  '수건',
   '감사',
   '김치',
   '상처',
@@ -11,6 +11,12 @@ var words =[
   '학교',
   '계란',
   '계단',
+  '지갑',
+  '연필',
+  '버터',
+  '확실',
+  '읽다',
+  '없어',
   '선생님'
 ]
 
@@ -52,7 +58,7 @@ function whiteSpace(){
 
 textInputElement.addEventListener('input', () => {
     // get all span type in an array
-    //const arrayText = textDisplayElement.querySelectorAll('span')
+    
     const arrayText = document.getElementsByTagName("span")
     const arrayValue = textInputElement.value.split('')
     letterTyped = arrayValue.length
@@ -125,4 +131,6 @@ textInputElement.addEventListener('input', () => {
     // if done this run showWord
   })
   
+
+
 
