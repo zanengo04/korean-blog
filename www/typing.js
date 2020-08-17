@@ -1,6 +1,6 @@
 const textDisplayElement = document.getElementById('textDisplay')
 const textInputElement = document.getElementById('textInput')
-let wordTyped = 0
+
 const numWords = 100
 var words =[
   '수건',
@@ -17,7 +17,8 @@ var words =[
   '확실',
   '읽다',
   '없어',
-  '선생님'
+  '선생님',
+  '야'
 ]
 
 
@@ -55,82 +56,60 @@ function whiteSpace(){
   }
 
 
-
+let wordTyped = 0
+let rowLength = 886.007 //length of word display box
+let keyStrokes = 0
 textInputElement.addEventListener('input', () => {
     // get all span type in an array
     
     const arrayText = document.getElementsByTagName("span")
+    //array value is values of all that is typed in
     const arrayValue = textInputElement.value.split('')
+    const keyTyped = textInputElement.value
     letterTyped = arrayValue.length
     // -1 because index needs to start from 0 and length is always at least 1
     const inputCharacter = arrayValue[letterTyped-1]
-
-    console.log(textInputElement.value)
-    
+    console.log(inputCharacter)
     if (inputCharacter == null) {
-        arrayText[wordTyped].classList.remove('correct')
-        arrayText[wordTyped].classList.remove('wrong')
-        correct = false
+        
     } else if(whiteSpace(inputCharacter)&&
          textInputElement.value !== arrayText[wordTyped].innerHTML){
         arrayText[wordTyped].classList.remove('correct')
         arrayText[wordTyped].classList.add('wrong')
         wordTyped += 1
         textInputElement.value = []
+        rowLength -= wordLengthCalculator(arrayText[wordTyped].innerHTML.length)
+        
     } else if (inputCharacter === arrayText[wordTyped].innerHTML[letterTyped-1]) {
         arrayText[wordTyped].classList.add('correct')
         arrayText[wordTyped].classList.remove('wrong')
-
+       
     } else {
         arrayText[wordTyped].classList.remove('correct')
         arrayText[wordTyped].classList.add('wrong')
         correct = false
-      
+        
     }
     if(textInputElement.value === arrayText[wordTyped].innerHTML){
         wordTyped += 1
         textInputElement.value = []
+        rowLength -= wordLengthCalculator(arrayText[wordTyped].innerHTML.length)
     } 
-
-
-        
-    
-    /*let correct = true
-    
-    arrayText.forEach((span, index) => {
-      const character = arrayValue[index]
-      let spanContent = span.innerHTML
-      console.log(spanContent)
-      for (i=0; i< spanContent.length; i++){
-        if (character == null) {
-            span.classList.remove('correct')
-            span.classList.remove('wrong')
-            correct = false
-          } else if (character === spanContent.substring(i,1)) {
-            span.classList.add('correct')
-            span.classList.remove('wrong')
-          } else {
-            span.classList.remove('correct')
-            span.classList.add('wrong')
-            correct = false
-          }
-      }
-      
-    })
-     for (wordIndex=0; wordIndex< wordTyped; wordIndex++){
-        wordCompare = arrayText[wordIndex].innerHTML
-        
-        //loop through the word to get individual letters to compare
-        for(letterIndex=0; letterIndex<letterTyped; letterIndex++){
-            inputCharacter = arrayValue[wordIndex]
-            letterCompare = wordCompare[letterIndex]
-            
-            console.log(letterCompare)
-    */
-  
-    // if done this run showWord
+    if (rowLength + 10.48 < wordLengthCalculator(arrayText[wordTyped].innerHTML.length)){
+      $('#textDisplay').css('top','-=60px')
+      rowLength = 886.007
+    }
+    console.log(rowLength)
   })
   
+  function wordLengthCalculator(wordLength) {
+      return (wordLength-1)*40 + 10.48
+  }
+
+  function countKeyStrokes(){
+      keyStrokes = ++
+      textInputElement.value == []
+  }
 
 
 
