@@ -58,20 +58,21 @@ function whiteSpace(){
 
 let wordTyped = 0
 let rowLength = 886.007 //length of word display box
-let keyStrokes = 0
+
 textInputElement.addEventListener('input', () => {
     // get all span type in an array
     
     const arrayText = document.getElementsByTagName("span")
     //array value is values of all that is typed in
     const arrayValue = textInputElement.value.split('')
-    const keyTyped = textInputElement.value
+  
     letterTyped = arrayValue.length
     // -1 because index needs to start from 0 and length is always at least 1
     const inputCharacter = arrayValue[letterTyped-1]
     console.log(inputCharacter)
     if (inputCharacter == null) {
-        
+        arrayText[wordTyped].classList.remove('correct')
+        arrayText[wordTyped].classList.remove('wrong')
     } else if(whiteSpace(inputCharacter)&&
          textInputElement.value !== arrayText[wordTyped].innerHTML){
         arrayText[wordTyped].classList.remove('correct')
@@ -104,11 +105,6 @@ textInputElement.addEventListener('input', () => {
   
   function wordLengthCalculator(wordLength) {
       return (wordLength-1)*40 + 10.48
-  }
-
-  function countKeyStrokes(){
-      keyStrokes = ++
-      textInputElement.value == []
   }
 
 
