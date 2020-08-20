@@ -18,13 +18,11 @@ var vocab =[
     {word: '감사', keyStrokes: 5}
 
 ]
-index = vocab.findIndex(object => object.word ==="학생");
-console.log(index)
 
 var words = vocab.map((object) =>{
     return object.word
 })
-console.log(words)
+
 
 showWord(words)
 function showWord(words) {
@@ -62,7 +60,8 @@ function whiteSpace(){
 
 let wordTyped = 0
 let rowLength = 886.007 //length of word display box
-
+let keyStrokeCorrect= 0
+let keyStrokeWrong = 0
 textInputElement.addEventListener('input', () => {
     // get all span type in an array
     
@@ -73,23 +72,40 @@ textInputElement.addEventListener('input', () => {
     letterTyped = arrayValue.length
     // -1 because index needs to start from 0 and length is always at least 1
     const inputCharacter = arrayValue[letterTyped-1]
-    console.log(inputCharacter)
+    //remove all styling if nothing has been typed
     if (inputCharacter == null) {
         arrayText[wordTyped].classList.remove('correct')
         arrayText[wordTyped].classList.remove('wrong')
+    // add incorrect if the user presses the space button and the word is incorrect
     } else if(whiteSpace(inputCharacter)&&
-         textInputElement.value !== arrayText[wordTyped].innerHTML){
+        textInputElement.value !== arrayText[wordTyped].innerHTML){
         arrayText[wordTyped].classList.remove('correct')
         arrayText[wordTyped].classList.add('wrong')
-        wordTyped += 1
         textInputElement.value = []
         rowLength -= wordLengthCalculator(arrayText[wordTyped].innerHTML.length)
-        
+        //remove space to compare, and add quotation mark
+        const wordCompare = arrayText[wordTyped].innerHTML.replace(/\s+/g,'')
+        const index = words.findIndex(object => object === wordCompare);
+        keyStrokeWrong += vocab[index].keyStrokes
+        wordTyped += 1
+
+    } else if(textInputElement.value === arrayText[wordTyped].innerHTML){
+        arrayText[wordTyped].classList.add('correct')
+        arrayText[wordTyped].classList.remove('wrong')
+        const wordCompare = arrayText[wordTyped].innerHTML.replace(/\s+/g,'')
+        const index = words.findIndex(object => object === wordCompare);
+        keyStrokeCorrect += vocab[index].keyStrokes
+
+    //add correct if everything is correct
     } else if (inputCharacter === arrayText[wordTyped].innerHTML[letterTyped-1]) {
         arrayText[wordTyped].classList.add('correct')
         arrayText[wordTyped].classList.remove('wrong')
-       
-    } else {
+        
+    
+    
+    }
+    // this is to add incorrect while the user is typing
+    else {
         arrayText[wordTyped].classList.remove('correct')
         arrayText[wordTyped].classList.add('wrong')
         correct = false
@@ -104,12 +120,10 @@ textInputElement.addEventListener('input', () => {
       $('#textDisplay').css('top','-=60px')
       rowLength = 886.007
     }
-    console.log(rowLength)
   })
   
   function wordLengthCalculator(wordLength) {
       return (wordLength-1)*40 + 10.48
   }
-
 
 
