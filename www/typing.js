@@ -2,25 +2,29 @@ const textDisplayElement = document.getElementById('textDisplay')
 const textInputElement = document.getElementById('textInput')
 
 const numWords = 100
-var words =[
-  '수건',
-  '감사',
-  '김치',
-  '상처',
-  '학생',
-  '학교',
-  '계란',
-  '계단',
-  '지갑',
-  '연필',
-  '버터',
-  '확실',
-  '읽다',
-  '없어',
-  '선생님',
-  '야'
-]
+var vocab =[
+    {word: '수건', keyStrokes: 5},
+    {word: '학생', keyStrokes: 6},
+    {word: '없어', keyStrokes: 6},
+    {word: '확실', keyStrokes: 7},
+    {word: '학생', keyStrokes: 6},
+    {word: '버터', keyStrokes: 4},
+    {word: '연필', keyStrokes: 6},
+    {word: '지갑', keyStrokes: 5},
+    {word: '계단', keyStrokes: 5},
+    {word: '계란', keyStrokes: 5},
+    {word: '학교', keyStrokes: 5},
+    {word: '김치', keyStrokes: 5},
+    {word: '감사', keyStrokes: 5}
 
+]
+index = vocab.findIndex(object => object.word ==="학생");
+console.log(index)
+
+var words = vocab.map((object) =>{
+    return object.word
+})
+console.log(words)
 
 showWord(words)
 function showWord(words) {
