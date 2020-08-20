@@ -64,7 +64,7 @@ let keyStrokeCorrect= 0
 let keyStrokeWrong = 0
 textInputElement.addEventListener('input', () => {
     // get all span type in an array
-    
+    console.log(wordTyped)
     const arrayText = document.getElementsByTagName("span")
     //array value is values of all that is typed in
     const arrayValue = textInputElement.value.split('')
@@ -88,13 +88,17 @@ textInputElement.addEventListener('input', () => {
         const index = words.findIndex(object => object === wordCompare);
         keyStrokeWrong += vocab[index].keyStrokes
         wordTyped += 1
-
+    //if word is correct then add correct class. Compare word to get index to find keystroke
+    //empty out the currently typed value for next comparision, reduce rowLength
     } else if(textInputElement.value === arrayText[wordTyped].innerHTML){
         arrayText[wordTyped].classList.add('correct')
         arrayText[wordTyped].classList.remove('wrong')
         const wordCompare = arrayText[wordTyped].innerHTML.replace(/\s+/g,'')
         const index = words.findIndex(object => object === wordCompare);
         keyStrokeCorrect += vocab[index].keyStrokes
+        wordTyped += 1
+        textInputElement.value = []
+        rowLength -= wordLengthCalculator(arrayText[wordTyped].innerHTML.length)
 
     //add correct if everything is correct
     } else if (inputCharacter === arrayText[wordTyped].innerHTML[letterTyped-1]) {
@@ -111,11 +115,7 @@ textInputElement.addEventListener('input', () => {
         correct = false
         
     }
-    if(textInputElement.value === arrayText[wordTyped].innerHTML){
-        wordTyped += 1
-        textInputElement.value = []
-        rowLength -= wordLengthCalculator(arrayText[wordTyped].innerHTML.length)
-    } 
+    
     if (rowLength + 10.48 < wordLengthCalculator(arrayText[wordTyped].innerHTML.length)){
       $('#textDisplay').css('top','-=60px')
       rowLength = 886.007
