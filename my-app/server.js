@@ -2,8 +2,14 @@
 if (process.env.NODE_ENV !== 'production'){
     require('dotenv').config()
 }
+import express from "express";
+import fs from "fs";
+import path from "path";
 
+import React from "react";
+import ReactDOMServer from "react-dom/server";
 
+import App from "./src/components/App";
 const express = require('express')
 const app = express()
 const bcrypt= require('bcrypt')
@@ -14,8 +20,6 @@ const flash= require('express-flash')
 const session= require('express-session')
 const methodOverride = require('method-override')
 var engine = require('consolidate');
-
-
 
 initializePassport(
 
@@ -34,6 +38,20 @@ const users= []
 // set view engine to ejs
 app.set("view engine", "ejs");
 app.engine('html', require('ejs').renderFile);
+app.use("^/$", (req, res, next) => {
+    fs.readFile(path.resolve("./build/index.html"), "utf-8", (err, data) => {
+      if (err) {
+        console.log(err);
+        return res.status(500).send("Some error happened");
+      }
+      return res.send(
+        data.replace(
+          '<div id="root"></div>',
+          `<div id="root">${ReactDOMServer.renderToString(<App />)}</div>`
+        )
+      );
+    });
+  });
 // take things from forms online to use in post method later
 app.use(express.urlencoded({extended: false}))
 
@@ -55,6 +73,7 @@ app.use(passport.session()) // to store variable in session
 
 //Set up static to public to refer to css file
 app.use(express.static(__dirname + '/build'));
+//app.use(express.static(path.resolve(__dirname, '.', 'build')))
 
 app.get('/typing',(req,res) => {
     res.render('typing.html')
