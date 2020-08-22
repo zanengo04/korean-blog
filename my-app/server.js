@@ -13,6 +13,9 @@ const passport = require('passport')
 const flash= require('express-flash')
 const session= require('express-session')
 const methodOverride = require('method-override')
+var engine = require('consolidate');
+
+
 
 initializePassport(
 
@@ -51,8 +54,14 @@ app.use(passport.initialize()) //function inside of passport that is going to se
 app.use(passport.session()) // to store variable in session
 
 //Set up static to public to refer to css file
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/build'));
 
+app.get('/typing',(req,res) => {
+    res.render('typing.ejs')
+})
+app.get('/typing-paragraph',(req,res) => {
+    res.render('paragraph.ejs')
+})
 
 //set up route to home page
 app.get('/', checkAuthenticated, (req,res) =>{

@@ -27,36 +27,29 @@
 
     <!-- ================= Favicon ================== -->
     <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+
+    <script language="JavaScript" type="text/javascript" src="../jquery-3.5.1.js"></script>
+
+    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/index.css">
-    <script src="myScript.js" defer></script>
+    <link rel="stylesheet" href="main.css">
+    <script src="typing.js" defer></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-    <!--use to make side bar social media icons-->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <!--youtube button-->
-    <script src="https://apis.google.com/js/platform.js"></script>
   </head>
 
 
 
   <body>
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" 
-    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0" nonce="07fFQvzB"></script>
-
-
-
-    <div class="grid-container-login">
+    <div class="grid-container-other">
       <header>
-        <a href="/">
+        <a href='/'>
           <img src="logo.png" width="auto" height="50" atl="logo" class="logo">
         </a>
               
         <nav>
           <ul>
-            <li><a href="/">Home</a></li>
+            <li><a href='/'>Home</a></li>
             <li class="listHover"><a href="#">Start Learning</a>
               <ul class='dropMenu'>
                   <li><a href="#">Learn The Alphabet</a></li>
@@ -75,43 +68,39 @@
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="/register">Sign up</a></li>
-            <li><a href="/login">Log In</a></li>
-  
+            <li><a href="#">Log In</a></li>
+
           </ul>
         </nav>
-        <form id="search">
+        <form>
           <input type="text" name="q" id="search" placeholder="Search">
           <a href="#" class = "search-button">
             <i class="fas fa-search"></i>
           </a>
         </form>
       </header>
-  
-      <main class= 'loginMain'>
-        <div class="loginBox">
-          <h1>Sign Up</h1>
-          <form action="/register" method="POST">
-            <p>Username</p>
-            <input type="text" id="username" name="username" placeholder="Enter Username" required>
-            <p>Email</p>
-            <input type="text" id="email" name="email" placeholder="Enter Email" required>
-            <p>Password</p>
-            <input type="text" id="password" name="password" placeholder="Enter Password" required>
-            <button type="submit">Sign Up</button>
-           
-          </form>
-        </div>
-       
+
+      <main>
+          <div class="timer" id= "timer">0</div>
+          <div class="typingContainer">
+              <div class="textBox">
+                <div class="text-display" id= "textDisplay">
+               
+                </div>
+              </div>
+              
+              <input type='text' class="text-Input" id="textInput" autofocus></input>
+              
+          </div>
+          
+
+                
       </main>
-      
-     
       
       <footer>
         <p>©Copyright 2050 by Quoc Ngo. All rights reversed.</p>
       </footer>
-      
     </div>
-    
   </body>
   
 </html>

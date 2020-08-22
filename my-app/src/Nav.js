@@ -6,7 +6,7 @@ export default function Nav() {
         <div>
             <nav>
                 <ul>
-                    <List link="index.html" content="Home"/>
+                    <List link="/" content="Home"/>
                     <li class="listHover"><a href="#">Start Learning</a>
                         <ul class='dropMenu'>
                             <List link="#" content="Learn The Alphabet"/>
@@ -16,16 +16,16 @@ export default function Nav() {
                         </ul>
                     </li>
                     <li><a href="#">Blog</a></li>
-                    <li class="listHover"><a href="typing.html">Typing Practice</a>
+                    <li class="listHover"><a href="/typing">Typing Practice</a>
                         <ul class='dropMenu'>
                             <List link="hangeul.html" content="Hangeul"/>
-                            <List link="paragraph.html" content="Paragraph"/>
+                            <List link="/typing-paragraph" content="Paragraph"/>
                         </ul>
                     </li>
                     <List link="about.html" content="About"/>
                     <List link="contact.html" content="Contact"/>
-                    <List link="signup.html" content="Sign up"/>
-                    <List link="login.html" content="Log In"/>
+                    <List link="/register" content="Sign up"/>
+                    <List link="/login" content="Log In"/>
                 </ul>
             </nav>
         </div>
