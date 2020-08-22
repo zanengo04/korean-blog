@@ -15,13 +15,12 @@ var vocab =[
     {word: '계란', keyStrokes: 5},
     {word: '학교', keyStrokes: 5},
     {word: '김치', keyStrokes: 5},
-    {word: '감사', keyStrokes: 5}
+    {word: '감사', keyStrokes: 5},
+    {word: '야', keystroke: 2}
 
 ]
 
-var words = vocab.map((object) =>{
-    return object.word
-})
+var words = vocab.map(vocabElement => vocabElement.word)
 
 
 showWord(words)
