@@ -33,7 +33,7 @@ const users= []
 
 // set view engine to ejs
 app.set("view engine", "ejs");
-
+app.engine('html', require('ejs').renderFile);
 // take things from forms online to use in post method later
 app.use(express.urlencoded({extended: false}))
 
@@ -57,7 +57,7 @@ app.use(passport.session()) // to store variable in session
 app.use(express.static(__dirname + '/build'));
 
 app.get('/typing',(req,res) => {
-    res.render('typing.ejs')
+    res.render('typing.html')
 })
 app.get('/typing-paragraph',(req,res) => {
     res.render('paragraph.ejs')

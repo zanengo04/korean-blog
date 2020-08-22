@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="main.css">
     <script src="typing.js" defer></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src ="../src/index.js" type = "text/jsx"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </head>
 
@@ -47,31 +48,7 @@
           <img src="logo.png" width="auto" height="50" atl="logo" class="logo">
         </a>
               
-        <nav>
-          <ul>
-            <li><a href='/'>Home</a></li>
-            <li class="listHover"><a href="#">Start Learning</a>
-              <ul class='dropMenu'>
-                  <li><a href="#">Learn The Alphabet</a></li>
-                  <li><a href="#">Basic Grammar</a></li>
-                  <li><a href="#">Intermediate Grammar</a></li>
-                  <li><a href="#">Essential Phrases</a></li>
-              </ul>
-              </li>
-            <li><a href="#">Blog</a></li>
-            <li class="listHover"><a href="typing.html">Typing Practice</a>
-              <ul class='dropMenu'>
-                <li><a href="hangeul.html">Hangeul</a></li>
-                <li><a href="paragraph.html">Paragraph</a></li>
-              </ul>
-              </li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="/register">Sign up</a></li>
-            <li><a href="#">Log In</a></li>
-
-          </ul>
-        </nav>
+        <div id="root"></div> 
         <form>
           <input type="text" name="q" id="search" placeholder="Search">
           <a href="#" class = "search-button">

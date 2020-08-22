@@ -1,5 +1,5 @@
 import React from 'react'
-import List from './List.js'
+import List from './List.jsx'
 export default function ListHover(props) {
     return (
         <div>

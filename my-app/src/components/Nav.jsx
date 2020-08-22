@@ -1,5 +1,5 @@
 import React from 'react'
-import List from './List.js'
+import List from './List.jsx'
 
 export default function Nav() {
     return (
@@ -18,7 +18,7 @@ export default function Nav() {
                     <li><a href="#">Blog</a></li>
                     <li class="listHover"><a href="/typing">Typing Practice</a>
                         <ul class='dropMenu'>
-                            <List link="hangeul.html" content="Hangeul"/>
+                            <List link="/typing" content="Hangeul"/>
                             <List link="/typing-paragraph" content="Paragraph"/>
                         </ul>
                     </li>
