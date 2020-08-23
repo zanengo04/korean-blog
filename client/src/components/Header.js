@@ -4,7 +4,7 @@ export default function Header() {
     return (
         
         <header>
-            <a href="index.html">
+            <a href="/">
                 <img src="logo.png" width="auto" height="50" atl="logo" class="logo" />
             </a>
             <Nav />     
