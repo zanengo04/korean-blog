@@ -9,6 +9,7 @@ import Typing from './components/Typing'
 import Register from './components/Register'
 import Login from './components/Login'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 function App() {
   return (
     <Router>
@@ -27,9 +28,7 @@ function App() {
         <Footer />
       </div>
     </Router>
-    
-    
-  );
+  )
 }
 
 export default App;
