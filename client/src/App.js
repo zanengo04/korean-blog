@@ -1,5 +1,4 @@
 import React from 'react';
-import Nav from './components/Nav.js';
 import Footer from './components/Footer.js';
 import Aside from './components/Aside.js';
 import Main from './components/Main.js';
