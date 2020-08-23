@@ -8,13 +8,13 @@ export default function Hangeul() {
                 {/* <!-- Word & Input --> */}
                 <div class="row">
                     <div class="col-md-6 mx-auto">
-                        <p class="lead">Type The Given Word Within
+                        <p class="lead">Type The Given Word Withn
                         <span class="text-success" id="seconds">5</span> Seconds:</p>
                         <h2 class="display-2 mb-5" id="current-word">hello</h2>
                         <form id="myForm"><input type="text"
-                            class="form-control form-control-lg" placeholder="Start typing..." id="word-input" autofocus /></form>
+                            class="form-control form-control-lg" placeholder="Start typing..." id="word-input" autofocus/></form>
                         
-                        <h4 class="mt-3" id="message" />
+                        <h4 class="mt-3" id="message"></h4>
                 
                         {/* <!-- Time & Score Columns --> */}
                         <div class="row mt-5">
@@ -29,16 +29,15 @@ export default function Hangeul() {
                                 </h3>
                             </div>
                         </div>
+            
                 
-                    
-                            
-                        
                         
                     </div>
+                    
+                
                 </div>
-            </div>
             
-            
+            </div> 
         </main>
     )
 }

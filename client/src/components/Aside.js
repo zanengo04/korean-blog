@@ -4,9 +4,7 @@ export default function Aside() {
     return (
         <div>
             <aside class='left-sidebar'>
-                <div id="fb-root"></div>
-                <script async defer crossorigin="anonymous" 
-                src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0" nonce="07fFQvzB"></script>
+                
                 
                 <div class="social">
                 <a href="https://www.facebook.com/" target="_blank">
