@@ -26,77 +26,68 @@
     <title>My test page</title>
 
     <!-- ================= Favicon ================== -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
-
-
-    
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
     <script src="myScript.js" defer></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!--use to make side bar social media icons-->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!--youtube button-->
+    <script src="https://apis.google.com/js/platform.js"></script>
+    <script src ="../src/index.js" type = "text/jsx"></script>
   </head>
 
 
 
   <body>
-    <header>
-      <a href='/'>
-        <img src="logo.png" width="auto" height="50" atl="logo" class="logo">
-      </a>
-            
-      <div id="root"></div> 
-      <form id="search">
-        <input type="text" name="q" id="search" placeholder="Search">
-        <a href="#" class = "search-button">
-          <i class="fas fa-search"></i>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" 
+    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0" nonce="07fFQvzB"></script>
+
+
+
+    <div class="grid-container-other">
+      <header>
+        <a href="index.html">
+          <img src="logo.png" width="auto" height="50" atl="logo" class="logo">
         </a>
-      </form>
-    </header>
-
-    <main>
-        <div class="container text-center">
-
-            <!-- Word & Input -->
-            <div class="row">
-              <div class="col-md-6 mx-auto">
-                <p class="lead">Type The Given Word Withn
-                  <span class="text-success" id="seconds">5</span> Seconds:</p>
-                <h2 class="display-2 mb-5" id="current-word">hello</h2>
-                <form id="myForm"><input type="text"
-                     class="form-control form-control-lg" placeholder="Start typing..." id="word-input" autofocus></form>
-                
-                <h4 class="mt-3" id="message"></h4>
+              
+        <div id="root"></div> 
+        <form id="search">
+          <input type="text" name="q" id="search" placeholder="Search">
+          <a href="#" class = "search-button">
+            <i class="fas fa-search"></i>
+          </a>
+        </form>
+      </header>
+  
+      <main class= 'loginMain'>
+        <div class="loginBox">
+          <h1>Login Here</h1>
+          <form>
+            <p>Username</p>
+            <input type="text" name="username" placeholder="Enter Username">
+            <p>Password</p>
+            <input type="text" name="password" placeholder="Enter Password">
+            <input type="submit" name="submit" value="Login">
+            <a href="#">Forgot your password?</a><br>
+            <a href="signup.html">Sign up</a>
+          </form>
+        </div>
         
-                <!-- Time & Score Columns -->
-                <div class="row mt-5">
-                  <div class="col-md-6">
-                    <h3>Time Left:
-                      <span id="time">0</span>
-                    </h3>
-                  </div>
-                  <div class="col-md-6">
-                    <h3>Score:
-                      <span id="score">0</span>
-                    </h3>
-                  </div>
-                </div>
-        
-               
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        
-          
-    </main>
-    <hr>
-    <footer>
-      <p>©Copyright 2050 by Quoc Ngo. All rights reversed.</p>
-    </footer>
+      </main>
+      
+     
+      
+      <footer>
+        <p>©Copyright 2050 by Quoc Ngo. All rights reversed.</p>
+      </footer>
+      
+    </div>
+    
   </body>
   
 </html>

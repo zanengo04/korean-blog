@@ -37,6 +37,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <!--youtube button-->
     <script src="https://apis.google.com/js/platform.js"></script>
+    <script src ="../src/index.js" type = "text/jsx"></script>
   </head>
 
 
@@ -48,9 +49,9 @@
 
 
 
-    <div class="grid-container">
+    <div class="grid-container-other">
       <header>
-        <a href='/'>
+        <a href="index.html">
           <img src="logo.png" width="auto" height="50" atl="logo" class="logo">
         </a>
               
@@ -63,26 +64,24 @@
         </form>
       </header>
   
-      <main>
+      <main class= 'loginMain'>
+        <div class="loginBox">
+          <h1>Sign Up</h1>
+          <form>
+            <p>Username</p>
+            <input type="text" name="username" placeholder="Enter Username">
+            <p>Password</p>
+            <input type="text" name="password" placeholder="Enter Password">
+            <p>Enter Password Again</p>
+            <input type="text" name="password" placeholder="Enter Password">
+            <input type="submit" name="submit" value="Login">
+           
+          </form>
+        </div>
         
-        <p>fsa</p>
       </main>
       
-      <aside class='left-sidebar'>
-        <div class="social">
-          <a href="https://www.facebook.com/" target="_blank">
-            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width=""
-            data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
-             <i class="fab fa-facebook"></i></a>
-          <a href="https://www.youtube.com/" target ="_blank">
-            <div class="g-ytsubscribe" data-channel="GoogleDevelopers" 
-            data-layout="default" data-count="default"></div> 
-            <i class="fab fa-youtube"></i></a>
-          <a href="https://www.instagram.com/" target ="_blank">Instagram <i class="fab fa-instagram"></i></a>
-          <a href="https://www.twitter.com/" target ="_blank">Twitter <i class="fab fa-twitter"></i></a>
-        </div>
-      </aside>
-      <aside class='right-sidebar'></aside>
+     
       
       <footer>
         <p>©Copyright 2050 by Quoc Ngo. All rights reversed.</p>

@@ -28,7 +28,7 @@
     <!-- ================= Favicon ================== -->
     <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="main.css">
     <script src="myScript.js" defer></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -49,9 +49,9 @@
 
 
 
-    <div class="grid-container-login">
+    <div class="grid-container">
       <header>
-        <a href="/">
+        <a href="index.html">
           <img src="logo.png" width="auto" height="50" atl="logo" class="logo">
         </a>
               
@@ -63,27 +63,27 @@
           </a>
         </form>
       </header>
-      
-      <main class= 'loginMain'>
-        <div class="loginBox">
-          <h1>Login Here</h1>
-          <% if(messages.error) { %>
-            <%= messages.error%>
-          <%}%>
-          <form action="/login" method="POST">
-            <p>Username</p>
-            <input type="text" name="username" id="username" placeholder="Enter Username" required>
-            <p>Password</p>
-            <input type="text" name="password" id="password" placeholder="Enter Password" required> 
-            <button type="submit">Log In</button>
-            <a href="#">Forgot your password?</a><br>
-            
-          </form>
-        </div>
+  
+      <main>
         
+        <p>fsa</p>
       </main>
       
-     
+      <aside class='left-sidebar'>
+        <div class="social">
+          <a href="https://www.facebook.com/" target="_blank">
+            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width=""
+            data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
+             <i class="fab fa-facebook"></i></a>
+          <a href="https://www.youtube.com/" target ="_blank">
+            <div class="g-ytsubscribe" data-channel="GoogleDevelopers" 
+            data-layout="default" data-count="default"></div> 
+            <i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com/" target ="_blank">Instagram <i class="fab fa-instagram"></i></a>
+          <a href="https://www.twitter.com/" target ="_blank">Twitter <i class="fab fa-twitter"></i></a>
+        </div>
+      </aside>
+      <aside class='right-sidebar'></aside>
       
       <footer>
         <p>©Copyright 2050 by Quoc Ngo. All rights reversed.</p>
