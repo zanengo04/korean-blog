@@ -51,12 +51,12 @@ app.use(passport.initialize()) //function inside of passport that is going to se
 app.use(passport.session()) // to store variable in session
 
 //Set up static to public to refer to css file
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/build'));
 
 
 //set up route to home page
 app.get('/', checkAuthenticated, (req,res) =>{
-    res.render('index.ejs', {name: req.user.username})
+    res.render('index.html', {name: req.user.username})
 })
 
 //render to log in page
@@ -128,5 +128,5 @@ app.delete('/logout', (req,res) => {
     res.redirect('/login')
 })
 
-//set up port on port 3000
-app.listen(3000)
+//set up port on port 5000
+app.listen(5000)
