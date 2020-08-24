@@ -1,4 +1,5 @@
 import React from 'react'
+import Aside from './Aside'
 
 export default function Main() {
     return (
@@ -95,5 +96,6 @@ export default function Main() {
             <p>My birthday is on the 9<sup>th</sup> of April.</p>
             <time datetime="2016-01-20">20 January 2016</time>
         </main>
+    
     )
 }

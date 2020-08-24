@@ -9,7 +9,18 @@ import Typing from './components/Typing'
 import Register from './components/Register'
 import Login from './components/Login'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import { withRouter } from 'react-router-dom';
+ 
+
+var includeAside = false
+function HideAside(){
+  if (window.location.pathname === '/register' || window.location.pathname === '/login'
+  || window.location.pathname === '/typing' || window.location.pathname === '/typing-hangeul'){
+    return null
+  } else{
+    return <Aside />
+  }
+}
+
 function App() {
   return (
     <Router>
@@ -24,10 +35,12 @@ function App() {
           <Route path="/register" component={Register} />
           
         </Switch>
-        <Aside />
+        {HideAside()}
         <Footer />
       </div>
+      
     </Router>
+    
   )
 }
 
