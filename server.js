@@ -51,7 +51,7 @@ app.use(passport.initialize()) //function inside of passport that is going to se
 app.use(passport.session()) // to store variable in session
 
 //Set up static to public to refer to css file
-app.use(express.static(__dirname + '/build'));
+app.use(express.static(__dirname + '/public'));
 
 
 //set up route to home page
@@ -107,7 +107,7 @@ function checkAuthenticated(req,res,next){
     if(req.isAuthenticated()){
         return next()
     }
-    //if the user is not logged in then redirect them
+    //if the user is not logged in then redirect them home
     res.redirect('/login')
 }
 
@@ -129,4 +129,4 @@ app.delete('/logout', (req,res) => {
 })
 
 //set up port on port 5000
-app.listen(5000)
+app.listen(process.env.PORT || 5000)
