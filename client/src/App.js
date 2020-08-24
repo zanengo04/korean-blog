@@ -10,8 +10,6 @@ import Register from './components/Register'
 import Login from './components/Login'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
  
-
-var includeAside = false
 function HideAside(){
   if (window.location.pathname === '/register' || window.location.pathname === '/login'
   || window.location.pathname === '/typing' || window.location.pathname === '/typing-hangeul'){
@@ -21,10 +19,10 @@ function HideAside(){
   }
 }
 
-function App() {
+function App(props) {
   return (
     <Router>
-      <div class="grid-container">
+      <div class={props.className}>
         <Header />
         <Switch>
           <Route exact path="/" component={Main} />
