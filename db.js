@@ -2,6 +2,7 @@ const express = require('express');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
 
+var jsonParser = bodyParser.json()
 
 
 
@@ -36,15 +37,14 @@ app.get('/add', (req,res) =>{
 });
 // insert data
 
-app.post('/register', (req,res) =>{
-    //let post = {username: req.body.username, password: req.body.password, email:req.body.email};
-    let userInput = {username: 'd', password: 'd', email: 'd'};
+app.post('/register', jsonParser, (req,res) =>{
+    let post = {username: req.body.username, password: req.body.password, email:req.body.email};
+    let userInput = {username: 'w', password: 'w', email: 'w'};
     let user = req.body
     console.log('this is the user:', user)
     let sql = 'INSERT INTO user SET ?';
     db.query(sql, user, (err, result) =>{
         if(err) throw err;
-        res.send('Successfully Register');
     });
 });
 
@@ -53,7 +53,6 @@ app.get('/login', (req,res) =>{
     let sql = 'SELECT * FROM user';
     db.query(sql, (err, result) =>{
         if(err) throw err;
-        res.send('Successfully Register');
     });
 });
 
