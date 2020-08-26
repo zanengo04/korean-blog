@@ -3,7 +3,7 @@ if (process.env.NODE_ENV !== 'production'){
     require('dotenv').config()
 }
 
-
+const util = require('util');
 const express = require('express')
 const app = express()
 const bcrypt= require('bcrypt')
@@ -36,40 +36,31 @@ db.connect((err) => {
 });
 
 
-// insert data
-
-app.post('/register', jsonParser, (req,res) =>{
-    let post = {username: req.body.username, password: req.body.password, email:req.body.email};
-    let user = req.body
-    console.log('this is the user:', user)
-    let sql = 'INSERT INTO user SET ?';
-    db.query(sql, user, (err, result) =>{
-        if(err) throw err;
-    });
-});
-
-initializePassport(
-
-    // this is the passport that is being configured
-    passport,
-
-    //find user based on username
-    username => users.find(user=> user.username === username),
-    //find user based on id
-    id => users.find(user=> user.id === id)
-)
+//  initializePassport(
+//      // this is the passport that is being configured
+//      passport,     //find user based on username
+//      username => users.find(user=> user.username === username),
+//      //find user based on id
+//      id => users.find(user=> user.id === user_id)
+//  )
 
 //use database for user instead later
-var users= []
-let sql = 'SELECT * FROM user';
-db.query(sql, async (err, result) =>{
-    if(err) {throw err;
-} else{
-    users = await result
-    
-}})
-console.log(users)
-
+function updateDB(){
+    let sql = 'SELECT * FROM user';
+    db.query(sql, async (err, result) =>{
+        if(err) {throw err;
+    } else{
+        const users = await result
+        initializePassport(
+            // this is the passport that is being configured
+            passport,     //find user based on username
+            username => users.find(user=> user.username === username),
+            //find user based on id
+            user_id => users.find(user=> user.id === user_id)
+        )
+    }})
+}
+updateDB()
 // set view engine to ejs
 app.set("view engine", "ejs");
 
@@ -123,27 +114,35 @@ app.get('/register', checkNotAuthenticated, (req,res) =>{
     res.render('register.ejs')
     // res.redirect('/register')
 })
+
 //post to register page
-app.post('/register', checkNotAuthenticated, async (req,res) =>{
+app.post('/register', jsonParser, checkNotAuthenticated, async (req,res) =>{
     //create a new user with the correct hashed password
     try {
         const hashedPassword = await bcrypt.hash(req.body.password, 10)
-        users.push({
-            // if you have db then you don't need to worry about this. Maybe replace this later 
-            id: Date.now().toString(),
-            username: req.body.username,
-            email: req.body.email,
-            password: hashedPassword
-        })
+        console.log(hashedPassword)
+        let userInfo = {username: req.body.username, password: hashedPassword, email:req.body.email};
+        let sql = 'INSERT INTO user SET ?';
+        db.query(sql, userInfo, (err, result) =>{
+            if(err) throw err;
+        });
+        // users.push({
+        //     // if you have db then you don't need to worry about this. Maybe replace this later 
+        //     // id: Date.now().toString(),
+        //     username: req.body.username,
+        //     email: req.body.email,
+        //     password: hashedPassword
+        // })
         //if the registration was successful then redirect the user
         res.redirect('/login')
+        updateDB()
         
     } catch {
         // if there is a failure then...
         res.redirect('/register')
         
     }
-    console.log(users)
+    
 })
 
 //use to check if the user is logged in or not

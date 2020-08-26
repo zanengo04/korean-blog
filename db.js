@@ -4,8 +4,6 @@ const bodyParser = require('body-parser');
 
 var jsonParser = bodyParser.json()
 
-
-
 //Create connection
 const db = mysql.createConnection({
     host : "localhost",
@@ -16,7 +14,6 @@ const db = mysql.createConnection({
 
 
 //connect
-
 db.connect((err) => {
     if(err){
         throw err;
