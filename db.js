@@ -1,6 +1,6 @@
 const express = require('express');
 const mysql = require('mysql');
-
+const bodyParser = require('body-parser');
 
 
 
@@ -10,7 +10,7 @@ const db = mysql.createConnection({
     host : "localhost",
     user : "root",
     password: "",
-    database: "nodemysql"
+    database: "koreanschema"
 });
 
 
@@ -25,47 +25,38 @@ db.connect((err) => {
 
 const app = express();
 
-//connect to html
-app.use(express.static(__dirname + '/www'));
-
-
-
-
-// create DB
-
-app.get('/createdb', (req,res) =>{
-    let sql = 'CREATE DATABASE nodemysql';
-    db.query(sql, (err, result) =>{
-        if(err) throw err;
-        console.log(result);
-        res.send('Database created');
-    });
-});
-
-// create table
-
-app.get('/table', (req,res) =>{
-    let sql = 'CREATE TABLE posts(id int AUTO_INCREMENT, title VARCHAR(255), body VARCHAR(255), PRIMARY KEY(id))';
-    db.query(sql, (err, result) =>{
+app.get('/add', (req,res) =>{
+    let userInput = {title: 'Post One', body: 'This is the first post'};
+    let sql = 'INSERT INTO user SET ?';
+    let query = db.query(sql, userInput, (err, result) =>{
         if(err) throw err;
         console.log(result);
         res.send('Post Table created');
     });
 });
-
 // insert data
 
-app.get('/add', (req,res) =>{
-    let post = {title: 'Post One', body: 'This is the first post'};
-    let sql = 'INSERT INTO posts SET ?';
-    let query = db.query(sql, post, (err, result) =>{
+app.post('/register', (req,res) =>{
+    //let post = {username: req.body.username, password: req.body.password, email:req.body.email};
+    let userInput = {username: 'd', password: 'd', email: 'd'};
+    let user = req.body
+    console.log('this is the user:', user)
+    let sql = 'INSERT INTO user SET ?';
+    db.query(sql, user, (err, result) =>{
         if(err) throw err;
-        console.log(result);
-        res.send('Post Table created');
+        res.send('Successfully Register');
     });
 });
 
+app.get('/login', (req,res) =>{
+   
+    let sql = 'SELECT * FROM user';
+    db.query(sql, (err, result) =>{
+        if(err) throw err;
+        res.send('Successfully Register');
+    });
+});
 
-app.listen('3000', () => {
-    console.log('Server started on port 3000');
+app.listen('5000', () => {
+    console.log('Server started on port 5000');
 });

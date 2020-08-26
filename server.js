@@ -51,7 +51,7 @@ app.use(passport.initialize()) //function inside of passport that is going to se
 app.use(passport.session()) // to store variable in session
 
 //Set up static to public to refer to css file
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/client/build'));
 
 
 //set up route to home page
