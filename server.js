@@ -13,6 +13,40 @@ const passport = require('passport')
 const flash= require('express-flash')
 const session= require('express-session')
 const methodOverride = require('method-override')
+const mysql = require('mysql');
+const bodyParser = require('body-parser');
+
+var jsonParser = bodyParser.json()
+
+//Create connection
+const db = mysql.createConnection({
+    host : "localhost",
+    user : "root",
+    password: "",
+    database: "koreanschema"
+});
+
+
+//connect
+db.connect((err) => {
+    if(err){
+        throw err;
+    }
+    console.log('MYsql connected');
+});
+
+
+// insert data
+
+app.post('/register', jsonParser, (req,res) =>{
+    let post = {username: req.body.username, password: req.body.password, email:req.body.email};
+    let user = req.body
+    console.log('this is the user:', user)
+    let sql = 'INSERT INTO user SET ?';
+    db.query(sql, user, (err, result) =>{
+        if(err) throw err;
+    });
+});
 
 initializePassport(
 
@@ -26,7 +60,15 @@ initializePassport(
 )
 
 //use database for user instead later
-const users= []
+var users= []
+let sql = 'SELECT * FROM user';
+db.query(sql, async (err, result) =>{
+    if(err) {throw err;
+} else{
+    users = await result
+    
+}})
+console.log(users)
 
 // set view engine to ejs
 app.set("view engine", "ejs");
@@ -52,6 +94,7 @@ app.use(passport.session()) // to store variable in session
 
 //Set up static to public to refer to css file
 app.use(express.static(__dirname + '/client/build'));
+app.use(express.static(__dirname + '/public'));
 
 
 //set up route to home page
@@ -63,6 +106,7 @@ app.get('/', checkAuthenticated, (req,res) =>{
 
 app.get('/login', checkNotAuthenticated, (req,res) =>{
     res.render('login.ejs')
+    // res.redirect('/login')
 })
 
 //post to login page
@@ -77,6 +121,7 @@ app.post('/login', checkNotAuthenticated, passport.authenticate('local',{
 
 app.get('/register', checkNotAuthenticated, (req,res) =>{
     res.render('register.ejs')
+    // res.redirect('/register')
 })
 //post to register page
 app.post('/register', checkNotAuthenticated, async (req,res) =>{
