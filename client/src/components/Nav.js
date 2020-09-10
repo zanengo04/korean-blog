@@ -1,26 +1,34 @@
 import React from 'react'
-import List from './List.js'
+import List from './List'
+import DropDownMenu from './DropDownMenu'
+
 
 export default function Nav() {
+    const dropDownContents =[
+        {link:"#", content:"Learn The Alphabet"},
+        {link:"#", content:"Basic Grammar"},
+        {link:"#", content:"Intermediate Grammar"},
+        {link:"#", content:"Essential Phrases"},
+    ]
+    const dropDownContents2 =[
+        {link:"/typing-hangeul", content:"Hangeul"},
+        {link:"/typing", content:"Paragraph"},
+    ]
     return (
         <nav>
             <ul>
                 <List link="/" content="Home"/>
-                <li class="listHover"><a href="#">Start Learning</a>
-                <ul class='dropMenu'>
-                    <List link="#" content="Learn The Alphabet"/>
-                    <List link="#" content="Basic Grammar"/>
-                    <List link="#" content="Intermediate Grammar"/>
-                    <List link="#" content="Essential Phrases"/>
-                </ul>
-                </li>
-                <li><a href="#">Blog</a></li>
-                <li class="listHover"><a href="/typing">Typing Practice</a>
-                <ul class='dropMenu'>
-                    <List link="/typing-hangeul" content="Hangeul"/>
-                    <List link="/typing" content="Paragraph"/>
-                </ul>
-                </li>
+                <DropDownMenu 
+                    link="#"
+                    content="Start Learning"
+                    dropDownContents={dropDownContents}
+                />
+                <List link="#" content="Blog"/>
+                <DropDownMenu 
+                    link="#"
+                    content="Typing Practice"
+                    dropDownContents={dropDownContents2}
+                />
                 <List link="/about" content="About"/>
                 <List link="/contact" content="Contact"/>
                 <List link="/register" content="Sign up"/>
