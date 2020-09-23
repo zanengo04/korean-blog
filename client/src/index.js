@@ -10,7 +10,9 @@ if (window.location.pathname === '/typing' || window.location.pathname === '/typ
 }
 
 ReactDOM.render(
-  <App className ={gridType}/>,
+  <React.StrictMode>
+    <App className ={gridType}/>,
+  </React.StrictMode>,
   document.getElementById('root')
 );
 

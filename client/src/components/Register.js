@@ -1,23 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-export default class Register extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = { 
-          username:'',
-          password:'',
-          email:''
-        };
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-    handleChange(event) {
-        this.setState({value: event.target.value});
-      }
+export default function Register() {
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+  const [email, setEmail] = useState('')
 
-    handleSubmit(event) {
-      event.preventDefault();
-      // On submit of the form, send a POST request with the data to the server.
+    const handleSubmit= (e) => {
+      e.preventDefault();
       fetch('/register', { 
         method: 'POST',
         headers: {
@@ -25,38 +14,36 @@ export default class Register extends React.Component {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            username: this.state.username,
-            password: this.state.password,
-            email: this.state.email
+            username: username,
+            password: password,
+            email: email,
           })
         })
         .then(res =>  res.json())
         .then(body => console.log(body));
     }
-    render() {
-      return (
-        <main class= 'loginMain'>
-            <div class="loginBox">
-                <h1>Sign Up</h1>
-                <form onSubmit={this.handleSubmit}>
-                    <p>Username</p>
-                    <input type="text" name="username" ref = 'username'
-                     placeholder="Enter Username" value={this.state.username} 
-                     onChange={e => this.setState({ username: e.target.value })}/>
-                    <p>Password</p>
-                    <input type="text" name="password" ref = 'password' 
-                    placeholder="Enter Password" value={this.state.password} 
-                    onChange={e => this.setState({ password: e.target.value })}/>
-                    <p>Enter Email</p>
-                    <input type="text" name="email" placeholder="Enter Email" 
-                    value={this.state.email} 
-                    onChange={e => this.setState({ email: e.target.value })}/>
-                    <input type="submit" name="submit" value="Sign Up" />
-                </form>
-            </div>
-            
-        </main>
-        
-      );
-    }
+    return (
+      <main class= 'loginMain'>
+          <div class="loginBox">
+              <h1>Sign Up</h1>
+              <form onSubmit={handleSubmit}>
+                  <p>Username</p>
+                  <input type="text" name="username"
+                    placeholder="Enter Username" value={username} 
+                    onChange={e => setUsername(e.target.value)}/>
+                  <p>Password</p>
+                  <input type="text" name="password"
+                  placeholder="Enter Password" value={password} 
+                  onChange={e => setPassword(e.target.value)}/>
+                  <p>Enter Email</p>
+                  <input type="text" name="email" placeholder="Enter Email" 
+                  value={email} 
+                  onChange={e => setEmail(e.target.value)}/>
+                  <input type="submit" name="submit" value="Sign Up" />
+              </form>
+          </div>
+          
+      </main>
+      
+    );
   }

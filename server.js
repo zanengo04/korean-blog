@@ -52,8 +52,6 @@ function updateDB(){
     }})
 }
 updateDB()
-// set view engine to ejs
-// app.set("view engine", "ejs");
 
 // take things from forms online to use in post method later
 app.use(express.urlencoded({extended: false}))
@@ -62,34 +60,19 @@ app.use(flash())
 
 //pass in what the desire method override
 app.use(methodOverride('_method'))
-//session takes a bunch of options, one of which is secret. That is a key that need to be kept
-// a secret because it is going to encrypt all the info. It's going to be taken from the
-// environment variable. It can be set to anything but it should be randomly generated for security
+
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false, // don't resolve session variable if nothing is changed
     saveUninitialized: false // don't save empty value in session
 }))
 
-app.use(passport.initialize()) //function inside of passport that is going to set up the "basics"
-app.use(passport.session()) // to store variable in session
+app.use(passport.initialize())
+app.use(passport.session())
 
 //Set up static to public to refer to css file
 app.use(express.static(__dirname + '/client/build'));
 app.use(express.static(__dirname + '/public'));
-
-
-// //set up route to home page
-// app.get('/', checkAuthenticated, (req,res) =>{
-//     res.render('index.html', {name: req.user.username})
-// })
-
-//render to log in page
-
-// app.get('/login', checkNotAuthenticated, (req,res) =>{
-//     res.render('login.ejs')
-//     // res.redirect('/login')
-// })
 
 //post to login page
 //use passport middleware
@@ -99,12 +82,6 @@ app.post('/login', jsonParser, checkNotAuthenticated, passport.authenticate('loc
     failureFlash: true //allow us to have flash message that can be displayed to the user that is already set up
 }))
 
-//render to signup page
-
-// app.get('/register', checkNotAuthenticated, (req,res) =>{
-//     res.render('register.ejs')
-//     // res.redirect('/register')
-// })
 
 //post to register page
 app.post('/register', jsonParser, checkNotAuthenticated, async (req,res) =>{

@@ -20,10 +20,10 @@ function HideAside(){
   }
 }
 
-function App(props) {
+function App({className}) {
   return (
     <Router>
-      <div class={props.className}>
+      <div className={className}>
         <Header />
         <Switch>
           <Route exact path="/" component={Main} />
