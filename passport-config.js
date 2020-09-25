@@ -6,10 +6,10 @@ function initialize(passport, getUserByUsername, getUserById) {
     //call done when you're done authenticating user
     const authenticateUser = async (username, password, done) => {
         const user = getUserByUsername(username)
-        console.log(user)
         //if there is no username then return done with that message. Can't return error because
         //there is no error when it comes to the server
         if (user == null) {
+            console.log('No user with that username')
             return done(null, false, {message:'No user with that username.'})
         }
 
@@ -18,8 +18,10 @@ function initialize(passport, getUserByUsername, getUserById) {
             // compare the password that the user typed in with the hashed password
             // if true then return the user
             if (await bcrypt.compare(password, user.password)) {
+                console.log('success')
                 return done(null,user)
             } else {
+                console.log('Password incorrect')
                 return done(null,false, {message: 'Password incorrect'})
             }
         } catch (error) {

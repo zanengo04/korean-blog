@@ -1,11 +1,21 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
+import axios from 'axios';
+
+const fetchData = async () => {
+  try {
+      const result = await axios.get('/login')
+      return result
+  } catch (error) {
+      
+  }
+}
 export default function Login() {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
 
-
-
+    
     const handleSubmit = (e) => {
       e.preventDefault();
       fetch('/login', { 
@@ -19,9 +29,11 @@ export default function Login() {
             password: password,
           })
         })
-        .then(res =>  res.json())
-        .then(body => console.log(body));
-    }
+        .then(res => res.json())
+        .then(body => console.log(body))
+        .then(data =>console.log(data))
+        ;
+      }
     return (
       <main class= 'loginMain'>
           <div class="loginBox">

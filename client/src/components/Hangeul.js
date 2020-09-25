@@ -14,7 +14,7 @@ export default function Hangeul() {
                         <form id="myForm"><input type="text"
                             class="form-control form-control-lg" placeholder="Start typing..." id="word-input" autofocus/></form>
                         
-                        <h4 class="mt-3" id="message"></h4>
+                        <h4 class="mt-3" id="message">a</h4>
                 
                         {/* <!-- Time & Score Columns --> */}
                         <div class="row mt-5">

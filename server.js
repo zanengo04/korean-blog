@@ -3,11 +3,9 @@ if (process.env.NODE_ENV !== 'production'){
     require('dotenv').config()
 }
 
-const util = require('util');
 const express = require('express')
 const app = express()
 const bcrypt= require('bcrypt')
-// use this to call things from other file
 const initializePassport = require('./passport-config')
 const passport = require('passport')
 const flash= require('express-flash')
@@ -18,7 +16,6 @@ const bodyParser = require('body-parser');
 
 var jsonParser = bodyParser.json()
 
-//Create connection
 const db = mysql.createConnection({
     host : "localhost",
     user : "root",
@@ -27,7 +24,6 @@ const db = mysql.createConnection({
 });
 
 
-//connect
 db.connect((err) => {
     if(err){
         throw err;
@@ -35,14 +31,13 @@ db.connect((err) => {
     console.log('MYsql connected');
 });
 
-//use database for user instead later
 function updateDB(){
     let sql = 'SELECT * FROM user';
     db.query(sql, async (err, result) =>{
         if(err) {throw err;
     } else{
         const users = await result
-        initializePassport(
+        return initializePassport(
             // this is the passport that is being configured
             passport,     //find user based on username
             username => users.find(user=> user.username === username),
@@ -77,11 +72,13 @@ app.use(express.static(__dirname + '/public'));
 //post to login page
 //use passport middleware
 app.post('/login', jsonParser, checkNotAuthenticated, passport.authenticate('local',{
-    successRedirect: '/',
+    successRedirect: '/login',
     failureRedirect: '/login',
-    failureFlash: true //allow us to have flash message that can be displayed to the user that is already set up
+    failureFlash:true,
 }))
-
+app.get('/login', (req, res) => {
+    req.isAuthenticated()? res.json({setLogin:true}):res.json({setLogin:false})
+})
 
 //post to register page
 app.post('/register', jsonParser, checkNotAuthenticated, async (req,res) =>{
@@ -90,17 +87,17 @@ app.post('/register', jsonParser, checkNotAuthenticated, async (req,res) =>{
         const hashedPassword = await bcrypt.hash(req.body.password, 10)
         console.log(hashedPassword)
         let userInfo = {username: req.body.username, password: hashedPassword, email:req.body.email};
+        console.log(userInfo)
         let sql = 'INSERT INTO user SET ?';
         db.query(sql, userInfo, (err, result) =>{
             if(err) throw err;
         });
-        //if the registration was successful then redirect the user
-        res.redirect('/login')
+        res.status(201).json({"some":"response"})
         updateDB()
-        
+        console.log('success')
     } catch {
-        // if there is a failure then...
-        res.redirect('/register')
+        console.log('fail')
+        
         
     }
     

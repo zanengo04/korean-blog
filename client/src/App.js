@@ -10,6 +10,7 @@ import Register from './components/Register'
 import Login from './components/Login'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import SignIn from './components/SignIn.js';
 
 function HideAside(){
   if (window.location.pathname === '/register' || window.location.pathname === '/login'
@@ -27,7 +28,7 @@ function App({className}) {
         <Header />
         <Switch>
           <Route exact path="/" component={Main} />
-          <Route path="/about" component={About} />
+          <Route path="/about" component={SignIn} />
           <Route path="/typing-hangeul" component={Hangeul} />
           <Route path="/typing" component={Typing} />
           <Route path="/login" component={Login} />
