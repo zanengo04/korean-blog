@@ -1,9 +1,15 @@
 import React from 'react'
+import LoginButton from './LoginButton';
+import LogoutButton from './LogoutButton';
+import Profile from './Profile';
 
 export default function Main() {
     return (
         <main>
-
+            
+            <LoginButton />
+            <LogoutButton />
+            <Profile />
 
             <button onclick="displayDate()">The time is?</button>  
             <p id="demo">Click below to get random number</p>

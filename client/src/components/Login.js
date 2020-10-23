@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from 'react'
 
 import axios from 'axios';
-import LoginButton from './LoginButton';
-import LogoutButton from './LogoutButton';
 
 const fetchData = async () => {
   try {
@@ -61,8 +59,6 @@ export default function Login() {
                   <a href="signup.html">Sign up</a>
               </form>
           </div>
-        <LoginButton />
-        <LogoutButton />
       </main>
       
     );
