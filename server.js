@@ -77,7 +77,7 @@ app.post('/login', jsonParser, checkNotAuthenticated, passport.authenticate('loc
     failureFlash:true,
 }))
 app.get('/login', (req, res) => {
-    req.isAuthenticated()? res.json({setLogin:true}):res.json({setLogin:false})
+    req.isAuthenticated()? res.json(true):res.json(false)
 })
 
 //post to register page
