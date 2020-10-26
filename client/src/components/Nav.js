@@ -23,7 +23,7 @@ export default function Nav() {
                     content="Start Learning"
                     dropDownContents={dropDownContents}
                 />
-                <List link="#" content="Blog"/>
+                <List link="/blog" content="Blog"/>
                 <DropDownMenu 
                     link="#"
                     content="Typing Practice"

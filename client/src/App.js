@@ -11,10 +11,12 @@ import Login from './components/Login'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SignIn from './components/SignIn.js';
+import Blog from './components/Blog.js';
 
 function HideAside(){
   if (window.location.pathname === '/register' || window.location.pathname === '/login'
-  || window.location.pathname === '/typing' || window.location.pathname === '/typing-hangeul'){
+  || window.location.pathname === '/typing' || window.location.pathname === '/typing-hangeul'
+  || window.location.pathname === '/blog'){
     return null
   } else{
     return <Aside />
@@ -33,6 +35,7 @@ function App({className}) {
           <Route path="/typing" component={Typing} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
+          <Route path="/blog" component={Blog} />
           
         </Switch>
         {HideAside()}

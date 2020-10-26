@@ -80,6 +80,24 @@ app.get('/login', (req, res) => {
     req.isAuthenticated()? res.json(true):res.json(false)
 })
 
+app.post('/comment', jsonParser, (req,res) =>{
+    //create a new user with the correct hashed password
+    try {
+        let comment = req.body.comment;
+        console.log(comment)
+        let sql = 'INSERT INTO comment (comment_content) VALUES (?)';
+        db.query(sql, comment, (err, result) =>{
+            if(err) throw err;
+        });
+        res.status(201).json({"some":"response"})
+        console.log('success')
+    } catch {
+        console.log('fail')
+        
+        
+    }
+})
+
 //post to register page
 app.post('/register', jsonParser, checkNotAuthenticated, async (req,res) =>{
     //create a new user with the correct hashed password
@@ -102,7 +120,6 @@ app.post('/register', jsonParser, checkNotAuthenticated, async (req,res) =>{
     }
     
 })
-
 //use to check if the user is logged in or not
 function checkAuthenticated(req,res,next){
     //if the user is logged in then move on to the next function
