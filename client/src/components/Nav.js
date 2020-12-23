@@ -5,10 +5,14 @@ import DropDownMenu from './DropDownMenu'
 
 export default function Nav() {
     const dropDownContents =[
-        {link:"#", content:"Learn The Alphabet"},
+        {link:"/alphabet", content:"Learn The Alphabet"},
+        {link:"#", content:"Essential Words"},
+        {link:"#", content:"Survival Phrases"},
+    ]
+    const dropDownContents3 =[
         {link:"#", content:"Basic Grammar"},
         {link:"#", content:"Intermediate Grammar"},
-        {link:"#", content:"Essential Phrases"},
+        {link:"#", content:"Advance Grammar"},
     ]
     const dropDownContents2 =[
         {link:"/typing-hangeul", content:"Hangeul"},
@@ -23,7 +27,11 @@ export default function Nav() {
                     content="Start Learning"
                     dropDownContents={dropDownContents}
                 />
-                <List link="/blog" content="Blog"/>
+                <DropDownMenu 
+                    link="#"
+                    content="Grammar"
+                    dropDownContents={dropDownContents3}
+                />
                 <DropDownMenu 
                     link="#"
                     content="Typing Practice"

@@ -3,7 +3,6 @@ import Footer from './components/Footer.js';
 import Aside from './components/Aside.js';
 import Main from './components/Main.js';
 import Header from './components/Header.js';
-import About from './components/About'
 import Hangeul from './components/Hangeul'
 import Typing from './components/Typing'
 import Register from './components/Register'
@@ -11,7 +10,7 @@ import Login from './components/Login'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SignIn from './components/SignIn.js';
-import Blog from './components/Blog.js';
+import KoreanAlphabet from './components/Pages/Alphabet';
 
 function HideAside(){
   if (window.location.pathname === '/register' || window.location.pathname === '/login'
@@ -35,7 +34,7 @@ function App({className}) {
           <Route path="/typing" component={Typing} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
-          <Route path="/blog" component={Blog} />
+          <Route path="/alphabet" component={KoreanAlphabet} />
           
         </Switch>
         {HideAside()}

@@ -15,11 +15,6 @@ function displayDate(){
   document.getElementById("demo").innerHTML = d;
 }
 
-// Typing game
-
-
-
-
 
 window.addEventListener('load', init);
 

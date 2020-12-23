@@ -120,7 +120,10 @@ app.post('/register', jsonParser, checkNotAuthenticated, async (req,res) =>{
     }
     
 })
-//use to check if the user is logged in or not
+app.get('/blog', jsonParser, (req,res) =>{
+    res.write('Hello')
+    res.end()
+})
 function checkAuthenticated(req,res,next){
     //if the user is logged in then move on to the next function
     if(req.isAuthenticated()){
