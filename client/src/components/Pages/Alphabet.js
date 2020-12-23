@@ -13,7 +13,7 @@ Unlike Chinese or Japanese which have hundreds or even thousands of characters �
 Korean letters are called jamo (자모) and they are written in syllabic blocks arranged in two dimensions. One such block always has exactly one syllable. For example, to write “honeybee” in Korean (kkulbeol), you’ll write 꿀벌, not ㄲㅜㄹㅂㅓㄹ. Today, Korean texts are typically written from left to write with spaces between words and western-style punctuation.
 
 As mentioned earlier, Hangul is a featural writing system. This means that the letters mimic the shape the mouth made when the corresponding sound is created. Absolutely fascinating! Let’s go into a little more detail and see how to pronounce the letters of the Korean alphabet.</p>
-            <h1>Vowels</h1>
+            <h1>Consonants</h1>
             <div class="row">
                 <div class="col-sm-4 col-xs-12">
                     <h3>
@@ -91,7 +91,80 @@ As mentioned earlier, Hangul is a featural writing system. This means that the l
                 <p>End of a word: no sound</p>
                 </div>
                 <div class="col-sm-4 col-xs-12 "></div></div>
-            <h1>Consonants</h1>
+            <h2>Double Consonants</h2>
+            <div class="row"><div class="col-sm-4 col-xs-12"><h3><img class="alignleft size-full wp-image-90" src="http://learn-hangul.com/wp-content/uploads/2014/05/ssang-giyok.png" alt="ssang-giyok" width="80" height="80" scale="0" />Ssang Giyok (쌍기역):</h3>
+            <p>Start of word:&nbsp;<strong>g</strong>&nbsp;like in&nbsp;<strong>g</strong>one</p>
+            <p>Start of a syllable:&nbsp;<strong>g</strong>&nbsp;like in&nbsp;<strong>g</strong>one</p>
+            <p>End of a word:&nbsp;<strong>g</strong>&nbsp;like in&nbsp;<strong>g</strong>one</p></div>
+            <div class="col-sm-4 col-xs-12"><h3><img class="alignleft size-full wp-image-89" src="http://learn-hangul.com/wp-content/uploads/2014/05/ssang-digeut.png" alt="ssang-digeut" width="80" height="80" scale="0" />Ssang Digeut (쌍디귿):</h3>
+            <p>Start of word:&nbsp;<strong>d</strong>&nbsp;like in&nbsp;<strong>d</strong>og</p>
+            <p>Start of a syllable:&nbsp;<strong>d</strong>&nbsp;like in&nbsp;<strong>d</strong>og</p>
+            <p>End of a word:&nbsp;<strong>d</strong>&nbsp;like in&nbsp;<strong>d</strong>og</p></div>
+            <div class="col-sm-4 col-xs-12 "><h3><img class="alignleft size-full wp-image-91" src="http://learn-hangul.com/wp-content/uploads/2014/05/ssang-bieup.png" alt="ssang-bieup" width="80" height="80" scale="0" />Ssang Bieup (쌍비읍):</h3>
+            <p>Start of word:&nbsp;<strong>b</strong>&nbsp;like in&nbsp;<strong>b</strong>ird</p>
+            <p>Start of a syllable:&nbsp;<strong>b</strong>&nbsp;like in&nbsp;<strong>b</strong>ird</p>
+            <p>End of a word:&nbsp;<strong>b</strong>&nbsp;like in&nbsp;<strong>b</strong>ird</p></div></div>
+            
+            <div class="row"><div class="col-sm-4 col-xs-12"><h3><img class="alignleft size-full wp-image-93" src="http://learn-hangul.com/wp-content/uploads/2014/05/ssang-siot.png" alt="ssang-siot" width="80" height="80" scale="0" />Ssang Siot (쌍시옷):</h3>
+            <p>Start of word:&nbsp;<strong>s</strong>&nbsp;like in&nbsp;<strong>s</strong>ome</p>
+            <p>Start of a syllable:&nbsp;<strong>s</strong>&nbsp;like in&nbsp;<strong>s</strong>ome</p>
+            <p>End of a word:&nbsp;<strong>t</strong>&nbsp;like in&nbsp;<strong>n</strong>ot</p></div>
+            <div class="col-sm-4 col-xs-12"><h3><img class="alignleft size-full wp-image-94" src="http://learn-hangul.com/wp-content/uploads/2014/05/ssang-jieut.png" alt="ssang-jieut" width="80" height="80" scale="0" />Ssang Jieut (쌍지읒):</h3>
+            <p>Start of word:&nbsp;<strong>j</strong>&nbsp;like in&nbsp;<strong>J</strong>im</p>
+            <p>Start of a syllable:&nbsp;<strong>j</strong>&nbsp;like in&nbsp;<strong>J</strong>im</p>
+            <p>End of a word:&nbsp;<strong>t</strong>&nbsp;like in no<strong>t</strong></p></div>
+            <div class="col-sm-4 col-xs-12 "></div></div>
+
+            <h1>Vowels</h1>
+
+            <div class="row"><div class="col-sm-4 col-xs-12"><h3><img class="alignleft size-full wp-image-96" src="http://learn-hangul.com/wp-content/uploads/2014/05/a.png" alt="a" width="80" height="80" scale="0" />a</h3>
+            <p>like in hah</p></div>
+            <div class="col-sm-4 col-xs-12"><h3><img class="alignleft size-full wp-image-97" src="http://learn-hangul.com/wp-content/uploads/2014/05/eo.png" alt="eo" width="80" height="80" scale="0" />eo</h3>
+            <p>like in run</p></div>
+            <div class="col-sm-4 col-xs-12 "><h3><img class="alignleft size-full wp-image-98" src="http://learn-hangul.com/wp-content/uploads/2014/05/o.png" alt="o" width="80" height="80" scale="0" />o</h3>
+            <p>like in dough</p></div></div>
+
+            <div class="row"><div class="col-sm-4 col-xs-12"><h3><img class="alignleft size-full wp-image-99" src="http://learn-hangul.com/wp-content/uploads/2014/05/u.png" alt="u" width="80" height="80" scale="0" />u</h3>
+            <p>like in moon</p></div>
+            <div class="col-sm-4 col-xs-12"><h3><img class="alignleft size-full wp-image-100" src="http://learn-hangul.com/wp-content/uploads/2014/05/eu.png" alt="eu" width="80" height="80" scale="0" />eu</h3>
+            <p>like in good</p></div>
+            <div class="col-sm-4 col-xs-12 "><h3><img class="alignleft size-full wp-image-101" src="http://learn-hangul.com/wp-content/uploads/2014/05/i.png" alt="i" width="80" height="80" scale="0" />i</h3>
+            <p>like in meet</p></div></div>
+
+            <div class="row"><div class="col-sm-4 col-xs-12"><h3><img class="alignleft size-full wp-image-102" src="http://learn-hangul.com/wp-content/uploads/2014/05/ae.png" alt="ae" width="80" height="80" scale="0" />ae</h3>
+            <p>like in at</p></div>
+            <div class="col-sm-4 col-xs-12"><h3><img class="alignleft size-full wp-image-103" src="http://learn-hangul.com/wp-content/uploads/2014/05/e.png" alt="e" width="80" height="80" scale="0" />e</h3>
+            <p>like in get</p></div>
+            <div class="col-sm-4 col-xs-12 "><h3><img class="alignleft size-full wp-image-104" src="http://learn-hangul.com/wp-content/uploads/2014/05/ya.png" alt="ya" width="80" height="80" scale="0" />ya</h3>
+            <p>like in yawn</p></div></div>
+
+            <div class="row"><div class="col-sm-4 col-xs-12"><h3><img class="alignleft size-full wp-image-105" src="http://learn-hangul.com/wp-content/uploads/2014/05/yeo.png" alt="yeo" width="80" height="80" scale="0" />yeo</h3>
+            <p>like in yum</p></div>
+            <div class="col-sm-4 col-xs-12"><h3><img class="alignleft size-full wp-image-106" src="http://learn-hangul.com/wp-content/uploads/2014/05/yo.png" alt="yo" width="80" height="80" scale="0" />yo</h3>
+            <p>like in yoke</p></div>
+            <div class="col-sm-4 col-xs-12 "><h3><img class="alignleft size-full wp-image-107" src="http://learn-hangul.com/wp-content/uploads/2014/05/yu.png" alt="yu" width="80" height="80" scale="0" />yu</h3>
+            <p>like in view</p></div></div>
+
+            <div class="row"><div class="col-sm-4 col-xs-12"><h3><img class="alignleft size-full wp-image-108" src="http://learn-hangul.com/wp-content/uploads/2014/05/yae.png" alt="yae" width="80" height="80" scale="0" />yae</h3>
+            <p>like in yak</p></div>
+            <div class="col-sm-4 col-xs-12"><h3><img class="alignleft size-full wp-image-109" src="http://learn-hangul.com/wp-content/uploads/2014/05/ye.png" alt="ye" width="80" height="80" scale="0" />ye</h3>
+            <p>like in yes</p></div>
+            <div class="col-sm-4 col-xs-12 "><h3><img class="alignleft size-full wp-image-110" src="http://learn-hangul.com/wp-content/uploads/2014/05/wa.png" alt="wa" width="80" height="80" scale="0" />wa</h3>
+            <p>like in wand</p></div></div>
+
+            <div class="row"><div class="col-sm-4 col-xs-12"><h3><img class="alignleft size-full wp-image-111" src="http://learn-hangul.com/wp-content/uploads/2014/05/wae.png" alt="wae" width="80" height="80" scale="0" />wae</h3>
+            <p>like in wax</p></div>
+            <div class="col-sm-4 col-xs-12"><h3><img class="alignleft size-full wp-image-112" src="http://learn-hangul.com/wp-content/uploads/2014/05/wo.png" alt="wo" width="80" height="80" scale="0" />wo</h3>
+            <p>like in wonder</p></div>
+            <div class="col-sm-4 col-xs-12 "><h3><img class="alignleft size-full wp-image-113" src="http://learn-hangul.com/wp-content/uploads/2014/05/we.png" alt="we" width="80" height="80" scale="0" />we</h3>
+            <p>like in wet</p></div></div>
+
+            <div class="row"><div class="col-sm-4 col-xs-12"><h3><img class="alignleft size-full wp-image-114" src="http://learn-hangul.com/wp-content/uploads/2014/05/oe.png" alt="oe" width="80" height="80" scale="0" />oe</h3>
+            <p>like in wait</p></div>
+            <div class="col-sm-4 col-xs-12"><h3><img class="alignleft size-full wp-image-115" src="http://learn-hangul.com/wp-content/uploads/2014/05/wi.png" alt="wi" width="80" height="80" scale="0" />wi</h3>
+            <p>like in week</p></div>
+            <div class="col-sm-4 col-xs-12 "><h3><img class="alignleft size-full wp-image-116" src="http://learn-hangul.com/wp-content/uploads/2014/05/ui.png" alt="ui" width="80" height="80" scale="0" />ui</h3>
+            <p>like in quey</p></div></div>
         </main>
     )
 }
