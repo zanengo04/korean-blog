@@ -1,5 +1,7 @@
 import React from 'react'
+
 import FlipCard from './FlipCard'
+import CommentBox from './CommentBox'
 
 export default function Main() {
     return (
@@ -21,7 +23,6 @@ export default function Main() {
                 back = {<a href ='#'>Want to travel to Korea? Learn this phrases</a>}
                 front = {<h1>Survival Phrases</h1>}
             />
-           
         </main>
     
     )

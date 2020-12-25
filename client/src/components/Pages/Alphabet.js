@@ -1,4 +1,5 @@
 import React from 'react'
+import CommentBox from '../CommentBox'
 
 export default function KoreanAlphabet() {
     return (
@@ -165,6 +166,8 @@ As mentioned earlier, Hangul is a featural writing system. This means that the l
             <p>like in week</p></div>
             <div class="col-sm-4 col-xs-12 "><h3><img class="alignleft size-full wp-image-116" src="http://learn-hangul.com/wp-content/uploads/2014/05/ui.png" alt="ui" width="80" height="80" scale="0" />ui</h3>
             <p>like in quey</p></div></div>
+
+            <CommentBox />
         </main>
     )
 }

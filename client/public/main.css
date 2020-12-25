@@ -382,3 +382,8 @@ a:link{
 .overview{
   line-height: 2;
 }
+
+.grammarCard{
+  float: left;
+  margin: 10px;
+}
