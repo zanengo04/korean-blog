@@ -1,7 +1,6 @@
 import React from 'react'
 
 import FlipCard from './FlipCard'
-import CommentBox from './CommentBox'
 
 export default function Main() {
     return (

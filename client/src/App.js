@@ -13,6 +13,10 @@ import KoreanAlphabet from './components/Pages/Alphabet';
 import Survival from './components/Pages/SurvivalKorean';
 import About from './components/Pages/About';
 import Grammar from './components/Pages/Grammar';
+import Grammar1 from './components/Pages/Grammar/Grammar1';
+import Grammar2 from './components/Pages/Grammar/Grammar2';
+import Grammar3 from './components/Pages/Grammar/Grammar3';
+import Grammar4 from './components/Pages/Grammar/Grammar4';
 
 function HideAside(){
   if (window.location.pathname === '/register' || window.location.pathname === '/login'
@@ -39,6 +43,11 @@ function App({className}) {
           <Route path="/alphabet" component={KoreanAlphabet} />
           <Route path="/survival-korean" component={Survival} />
           <Route path="/grammar" component={Grammar} />
+          <Route path="/to-be" component={Grammar1} />
+          <Route path="/as-well" component={Grammar2} />
+          <Route path="/like" component={Grammar3} />
+          <Route path="/to-have" component={Grammar4} />
+
           
         </Switch>
         {HideAside()}

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -21,28 +23,30 @@ export default function ImgMediaCard() {
     <main>
         <div className ="grammarCard">
             <Card className={classes.root}>
-            <CardActionArea>
-            <CardMedia
-                component="img"
-                alt="Grammar 1: 이다"
-                height="140"
-                image={require("./content/grammar1.png")}
-                title="Grammar 1: 이다"
-                />
-                <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                    To be
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                    After this lesson you will learn how to say: "I am", "It is", "She is", "They are", etc.
-                </Typography>
-                </CardContent>
-            </CardActionArea>
+                <Link to={'/to-be'}>
+                    <CardActionArea>
+                    <CardMedia
+                        component="img"
+                        alt="Grammar 1: 이다"
+                        height="140"
+                        image={require("./content/grammar1.png")}
+                        title="Grammar 1: 이다"
+                        />
+                        <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                            To be
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                            After this lesson you will learn how to say: "I am", "It is", "She is", "They are", etc.
+                        </Typography>
+                        </CardContent>
+                    </CardActionArea>
+                </Link>
             <CardActions>
                 <Button size="small" color="primary">
                 Share
                 </Button>
-                <Button size="small" color="primary">
+                <Button size="small" color="primary" href="/to-be">
                 Learn More
                 </Button>
             </CardActions>
@@ -50,29 +54,30 @@ export default function ImgMediaCard() {
         </div>
         <div className ="grammarCard">
             <Card className={classes.root}>
-            <CardActionArea>
-            <CardMedia
-                component="img"
-                alt="Grammar 2: 도"
-                height="140"
-                image={require("./content/grammar2.png")}
-                title="Grammar 2: 도"
-                />
-                <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                    As well
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                    across all continents except Antarctica
-                </Typography>
-                </CardContent>
-            </CardActionArea>
+            <Link to={'./as-well'}>
+                <CardActionArea>
+                <CardMedia
+                    component="img"
+                    alt="Grammar 2: 도"
+                    height="140"
+                    image={require("./content/grammar2.png")}
+                    title="Grammar 2: 도"
+                    />
+                    <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                        As well
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        Learn how to agree to an expression or somebody's opinion.
+                    </Typography>
+                    </CardContent>
+                </CardActionArea>
+            </Link>
             <CardActions>
                 <Button size="small" color="primary">
                 Share
                 </Button>
-                <Button size="small" color="primary">
+                <Button size="small" color="primary" href="/as-well">
                 Learn More
                 </Button>
             </CardActions>
@@ -80,29 +85,30 @@ export default function ImgMediaCard() {
         </div>
         <div className ="grammarCard">
             <Card className={classes.root}>
-            <CardActionArea>
-            <CardMedia
-                component="img"
-                alt="Grammar 1: 이다"
-                height="140"
-                image={require("./content/grammar3.png")}
-                title="Grammar 1: 이다"
-                />
-                <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                    Lizard
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                    across all continents except Antarctica
-                </Typography>
-                </CardContent>
-            </CardActionArea>
+            <Link to={'/like'}> 
+                <CardActionArea>
+                <CardMedia
+                    component="img"
+                    alt="Grammar 3: 좋다"
+                    height="140"
+                    image={require("./content/grammar3.png")}
+                    title="Grammar 3: 좋다"
+                    />
+                    <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                        To like
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        Learn how to express your affection towards an object or someone.
+                    </Typography>
+                    </CardContent>
+                </CardActionArea>
+            </Link>
             <CardActions>
                 <Button size="small" color="primary">
                 Share
                 </Button>
-                <Button size="small" color="primary">
+                <Button size="small" color="primary" href='/like'>
                 Learn More
                 </Button>
             </CardActions>
@@ -110,29 +116,30 @@ export default function ImgMediaCard() {
         </div>
         <div className ="grammarCard">
             <Card className={classes.root}>
-            <CardActionArea>
-            <CardMedia
-                component="img"
-                alt="Grammar 1: 이다"
-                height="140"
-                image={require("./content/grammar4.png")}
-                title="Grammar 1: 이다"
-                />
-                <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                    Gr
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                    across all continents except Antarctica
-                </Typography>
-                </CardContent>
-            </CardActionArea>
+            <Link to={'/to-have'}>
+                <CardActionArea>
+                <CardMedia
+                    component="img"
+                    alt="Grammar 4: 있다"
+                    height="140"
+                    image={require("./content/grammar4.png")}
+                    title="Grammar 4: 있다"
+                    />
+                    <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                        To have
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        Learn how to say you have something, or to express an existence of something.
+                    </Typography>
+                    </CardContent>
+                </CardActionArea>
+            </Link>
             <CardActions>
                 <Button size="small" color="primary">
                 Share
                 </Button>
-                <Button size="small" color="primary">
+                <Button size="small" color="primary" href={'/to-have'}>
                 Learn More
                 </Button>
             </CardActions>

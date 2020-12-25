@@ -159,7 +159,7 @@ footer{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transform: translate(-245px, 0);
+  transform: translate(-250px, 0);
 }
 
 .social a{
@@ -211,7 +211,7 @@ footer{
 }
                            
 .fb-like{
-  transform: translate(5%, -30%);
+  transform: translate(5%, 0%);
   
 }
 
@@ -386,4 +386,13 @@ a:link{
 .grammarCard{
   float: left;
   margin: 10px;
+}
+
+.MuiTypography-root.MuiTypography-h5.MuiTypography-gutterBottom{
+  text-decoration: none;
+  color:black
+}
+
+.MuiCardContent-root{
+  height:130px
 }
