@@ -19,7 +19,7 @@ Let’s start building sentences in Korean. In this lesson, we will start by mak
 
 In each of those sentences, a different word (is, am, are, was, were) is used depending on the subject and tense of the sentence. I can’t imagine how difficult this would be for an English learner. In Korean, the 이다 is used to represent all of those “to be” words.
 <br/><br />
-As mentioned earlier, 이다 can be conjugated. In that way, 이다 is similar to verbs and adjectives, but the rules for 이다 are often (but not always) different. I will teach you how 이다 differs from verbs and adjectives as it becomes important in later lessons. For example, in Lesson 52 you will learn that the process for quoting a sentence with 이다 is different than with verbs and adjectives.
+As mentioned earlier, 이다 can be conjugated. In that way, 이다 is similar to verbs and adjectives, but the rules for 이다 are often (but not always) different. I will teach you how 이다 differs from verbs and adjectives as it becomes important in later lessons.
 <br /><br />
 Like adjectives, 이다 can not act on an object. Only verbs can act on objects. For example:
 <br /><br />
@@ -43,7 +43,7 @@ Look at those four sentences. When we use adjectives in English, we must also us
     <li>They hungry</li>
     <li>We smart</li>
 </ul>
-Unlike in English, 이다 is not used in these types of sentences. That is, we do not use 이다 to indicate that something “is” an adjective. The structure of sentences predicated by adjectives is discussed in Lesson 3.
+Unlike in English, 이다 is not used in these types of sentences. That is, we do not use 이다 to indicate that something “is” an adjective.
 <br /><br />
 So, 이다 is not used in these types of sentences:
 
