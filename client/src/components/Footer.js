@@ -4,7 +4,7 @@ export default function Footer() {
     return (
        
         <footer>
-            <p>©Copyright 2050 by Quoc Ngo. All rights reversed.</p>
+            <p>©Copyright 2020 by Quoc Ngo. All rights reversed.</p>
         </footer>
 
     )

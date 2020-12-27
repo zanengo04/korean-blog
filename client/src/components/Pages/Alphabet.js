@@ -5,7 +5,7 @@ export default function KoreanAlphabet() {
     return (
         <main>
             <h1>Overview</h1>
-                <p  className = 'overview'>The Korean alphabet or Hangul consists of 24 basic letters: 14 consonants (ㄱ ㄴ ㄷ ㄹ ㅁ ㅂ ㅅ ㅇ ㅈ ㅊ ㅋ ㅌ ㅍ ㅎ) and 10 vowels (ㅏ ㅑ ㅓ ㅕ ㅗ ㅛ ㅜ ㅠ ㅡ ㅣ). Additionally, as you’ll dive into it, you’ll discover that there are in fact 19 complex letters with 5 tense consonants (ㄲ ㄸ ㅃ ㅉ ㅆ) and 11 complex vowels (ㅢ ㅚ ㅐ ㅟ ㅔ ㅒ ㅖ ㅘ ㅝ ㅙ ㅞ) formed by combining the basic letters.
+                <p className="doubleSpace">The Korean alphabet or Hangul consists of 24 basic letters: 14 consonants (ㄱ ㄴ ㄷ ㄹ ㅁ ㅂ ㅅ ㅇ ㅈ ㅊ ㅋ ㅌ ㅍ ㅎ) and 10 vowels (ㅏ ㅑ ㅓ ㅕ ㅗ ㅛ ㅜ ㅠ ㅡ ㅣ). Additionally, as you’ll dive into it, you’ll discover that there are in fact 19 complex letters with 5 tense consonants (ㄲ ㄸ ㅃ ㅉ ㅆ) and 11 complex vowels (ㅢ ㅚ ㅐ ㅟ ㅔ ㅒ ㅖ ㅘ ㅝ ㅙ ㅞ) formed by combining the basic letters.
 
 The name “Hangeul” combines the Korean word han (한) – meaning “great” – and geul (글) – meaning “script”. However, the word han is also used to refer to Korea in general, so the name can also translate to “Korean script”.
 

@@ -31,7 +31,7 @@
 main{
   grid-area: main;
   padding-top: 20px;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   padding: 10px;
 }
 
@@ -65,7 +65,7 @@ header{
   top: 0;
   width: 100%;
   position: fixed;
-  background-color: white;
+  background-color: rgb(207, 240, 253) ;
 }
 
 header::after {
@@ -112,8 +112,7 @@ nav ul li{
 
 .dropMenu{
   display: none;
-  background-color: rgb(0, 0, 0);
-  opacity: 0.88;
+  background-color: rgb(255, 255, 255);
   color:white;
   text-decoration: none;
   position: absolute;
@@ -121,6 +120,7 @@ nav ul li{
   padding-top: 12px;
   margin-bottom: 5px;
   z-index: 1;
+  border: 1.5px solid black
 }
 
 .listHover:hover ul{
@@ -139,6 +139,7 @@ footer{
   grid-area: footer;
   background-color: black;
   color:white;
+  text-align: center;
 }
 
 
@@ -326,7 +327,11 @@ footer{
   border: 2px solid black;
   border-radius: 15px;
   margin: auto;
+  margin-top: 20px;
   text-transform: none;
+}
+.startHere:hover{
+  background-color:  rgb(207, 240, 253);
 }
 a:link{
   text-decoration: none!important;
@@ -345,7 +350,7 @@ a:link{
   background-color: transparent;
   width: 300px;
   height: 200px;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1000px; 
 }
 
 .flip-card-inner {
@@ -367,24 +372,28 @@ a:link{
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 .flip-card-front {
-  background-color: rgb(71, 187, 255);
+  background-color: rgb(255, 255, 255);
   color: black;
+  border: 1.5px solid black;
+  padding: 22px 0
 }
 
 .flip-card-back {
-  background-color: rgb(71, 187, 255);
+  background-color: rgb(255, 255, 255);
   color: white;
   transform: rotateY(180deg);
+  text-align: center;
+  border: 1.5px solid black;
+  padding: 50px 0
 }
 
-.overview{
+.doubleSpace{
   line-height: 2;
 }
-
 .grammarCard{
   float: left;
   margin: 10px;
@@ -397,4 +406,22 @@ a:link{
 
 .MuiCardContent-root{
   height:130px
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  margin: auto;
+}
+
+#korean{
+  width: 150px
+}
+#korean2{
+  width: 250px
+}
+
+#english2{
+  width: 300px
 }

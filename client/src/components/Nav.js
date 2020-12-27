@@ -17,7 +17,7 @@ export default function Nav() {
             <ul>
                 <List link="/" content="Home"/>
                 <DropDownMenu 
-                    link="#"
+                    link="/alphabet"
                     content="Start Learning"
                     dropDownContents={dropDownContents}
                 />

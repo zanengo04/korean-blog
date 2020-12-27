@@ -145,7 +145,7 @@ export default function ImgMediaCard() {
             </CardActions>
             </Card>
         </div>
-
+        
     </main>
   );
 }
