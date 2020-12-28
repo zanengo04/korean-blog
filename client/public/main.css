@@ -154,8 +154,6 @@ footer{
   background-color: white;
 }
 
-/* Social media icons */
-
 .social{
   position: fixed;
   height: 70vh;
@@ -376,14 +374,14 @@ a:link{
   backface-visibility: hidden;
 }
 .flip-card-front {
-  background-color: rgb(255, 255, 255);
+  background-color:rgb(207, 240, 253);
   color: black;
   border: 1.5px solid black;
   padding: 22px 0
 }
 
 .flip-card-back {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(207, 240, 253);
   color: white;
   transform: rotateY(180deg);
   text-align: center;
@@ -395,10 +393,16 @@ a:link{
   line-height: 2;
 }
 .grammarCard{
-  float: left;
+  display:flex;
+  float:left;
   margin: 10px;
+  justify-content: center;
 }
 
+.MuiPaper-root.MuiCard-root.makeStyles-root-1.MuiPaper-elevation1.MuiPaper-rounded{
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 .MuiTypography-root.MuiTypography-h5.MuiTypography-gutterBottom{
   text-decoration: none;
   color:black
@@ -424,4 +428,56 @@ table, th, td {
 
 #english2{
   width: 300px
+}
+
+.hamburger-icon {
+  margin: 1em;
+  width: 40px;
+  float: right;
+  display: none
+}
+
+.hamburger-icon:after, 
+.hamburger-icon:before, 
+.hamburger-icon div {
+  background-color: black;
+  border-radius: 3px;
+  content: '';
+  display: block;
+  height: 5px;
+  margin: 7px 0;
+  transition: all .2s ease-in-out;
+}
+
+/*.hamburger-icon:active:before {
+  transform: translateY(12px) rotate(135deg);
+}
+
+.hamburger-icon:active:after {
+  transform: translateY(-12px) rotate(-135deg);
+}
+*/
+@media only screen and (max-width: 1025px) {
+  .grammarCard{
+    float:none
+  }
+  .social{
+    display:none
+  }
+  nav ul{
+    display:none
+  }
+  .hamburger-icon{
+    display: block
+  }
+  .grid-container{
+    margin:0;
+    display:grid;
+    grid-template-columns: 1.2fr 4fr 1.2fr;
+    grid-template-rows: 1fr minmax(635px, auto) 1fr;
+    grid-template-areas:
+      "header    header header"
+      "main       main  main"
+      "footer    footer footer";
+  }
 }

@@ -8,7 +8,6 @@ export default function Header() {
                 <img src="logo.png" width="auto" height="50" atl="logo" className="logo" />
             </a>
             <Nav />
-            
         </header>
         
     )

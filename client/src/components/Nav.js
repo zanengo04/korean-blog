@@ -31,6 +31,10 @@ export default function Nav() {
                 <List link="/register" content="Sign up"/>
                 <List link="/login" content="Log In"/>
             </ul>
+            
+            <div class="hamburger-icon" id="hamburger-icon">
+                <div></div>
+            </div>
         </nav>
     )
 }
