@@ -11,25 +11,20 @@ const passport = require('passport')
 const flash= require('express-flash')
 const session= require('express-session')
 const methodOverride = require('method-override')
-const mysql = require('mysql');
 const bodyParser = require('body-parser');
+const { Client } = require('pg');
 
 var jsonParser = bodyParser.json()
 
-const db = mysql.createConnection({
-    host : "localhost",
-    user : "root",
-    password: "",
-    database: "koreanschema"
+
+const db = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
 });
 
-
-db.connect((err) => {
-    if(err){
-        throw err;
-    }
-    console.log('MYsql connected');
-});
+db.connect();
 
 function updateDB(){
     let sql = 'SELECT * FROM user';
@@ -151,4 +146,4 @@ app.delete('/logout', (req,res) => {
 })
 
 //set up port on port 5000
-app.listen(process.env.PORT || 5000)
+app.listen(process.env.PORT || 80)
