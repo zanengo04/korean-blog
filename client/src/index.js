@@ -4,7 +4,7 @@ import App from "./App";
 import { Auth0Provider } from "@auth0/auth0-react";
 
 let gridType = ""
-if (window.location.pathname === '/typing' || window.location.pathname === '/typing-hangeul' || window.location.pathname === '/'){
+if (window.location.pathname === '/home'){
   gridType ="grid-container-other"
 } else{
   gridType ="grid-container"

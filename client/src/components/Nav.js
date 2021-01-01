@@ -2,7 +2,6 @@ import React from 'react'
 import List from './List'
 import DropDownMenu from './DropDownMenu'
 
-
 export default function Nav() {
     const dropDownContents =[
         {link:"/alphabet", content:"Learn The Alphabet"},
@@ -15,7 +14,7 @@ export default function Nav() {
     return (
         <nav>
             <ul>
-                <List link="/" content="Home"/>
+                <List link="/home" content="Home"/>
                 <DropDownMenu 
                     link="/alphabet"
                     content="Start Learning"

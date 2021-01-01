@@ -393,10 +393,9 @@ a:link{
   line-height: 2;
 }
 .grammarCard{
-  display:flex;
-  float:left;
-  margin: 10px;
-  justify-content: center;
+  text-align:left;
+  display: inline-block;
+  margin: 10px
 }
 
 .MuiPaper-root.MuiCard-root.makeStyles-root-1.MuiPaper-elevation1.MuiPaper-rounded{
@@ -458,9 +457,6 @@ table, th, td {
 }
 */
 @media only screen and (max-width: 1025px) {
-  .grammarCard{
-    float:none
-  }
   .social{
     display:none
   }
@@ -480,4 +476,13 @@ table, th, td {
       "main       main  main"
       "footer    footer footer";
   }
+}
+
+.introCard{
+  text-align:left;
+  display: inline-block;
+  margin: 10px
+}
+.cardAlign{
+  text-align: center;
 }

@@ -5,7 +5,7 @@ export default function Grammar1() {
     return (
         <main>
             <h1>To be: 이다</h1>
-            <p>
+            <p className="doubleSpace">
 
             Let’s start building sentences in Korean. In this lesson, we will start by making simple sentences using the word 이다. The translation for “이다” is “to be.”  English speakers often don’t realize how difficult the word “to be” is. Depending on who is being referred to, the word “to be” could be any of the underlined words below:
             <br/>

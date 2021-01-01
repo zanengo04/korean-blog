@@ -18,6 +18,7 @@ import Grammar2 from './components/Pages/Grammar/Grammar2';
 import Grammar3 from './components/Pages/Grammar/Grammar3';
 import Grammar4 from './components/Pages/Grammar/Grammar4';
 
+
 function HideAside(){
   if (window.location.pathname === '/register' || window.location.pathname === '/login'
   || window.location.pathname === '/typing' || window.location.pathname === '/typing-hangeul'
@@ -34,7 +35,7 @@ function App({className}) {
       <div className={className}>
         <Header />
         <Switch>
-          <Route exact path="/" component={Main} />
+          <Route exact path="/home" component={Main} />
           <Route path="/about" component={About} />
           <Route path="/typing-hangeul" component={Hangeul} />
           <Route path="/typing" component={Typing} />
